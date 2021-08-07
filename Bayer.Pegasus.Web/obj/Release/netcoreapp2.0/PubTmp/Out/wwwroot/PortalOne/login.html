@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/portal-one.css" />
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="js/portal-one.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</head>
+<body id="loginBody">
+    <div id="menu">
+        <div id="logos">
+            <a class="navbar-brand" href="/PortalOne/login.html">
+                <img src="/images/agroservices.png">
+            </a>
+            <a class="bayer-logo" href="http://www.bayer.com.br/" target="_blank">
+                <img src="images/logo-bayer.png">
+            </a>
+        </div>
+    </div>
+    <div id="login-area">
+        <div class="content-login">
+            <h3><strong>Seja</strong> bem-vindo!</h3>
+            <form>
+                <input type="text" name="cwid" placeholder="CWID" />
+                <input type="password" name="pass" placeholder="Senha" />
+                <input type="button" id="enviar-login" value="Entrar" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

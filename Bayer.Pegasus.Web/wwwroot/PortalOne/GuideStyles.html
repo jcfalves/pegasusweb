@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/lib/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bayer-controls.css">
+    <link href="/lib/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <style name="fonts">
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: normal;
+            font-weight: 100;
+            src: url("https://shared.bayer.com/fonts/western/cc0b18f1-39d1-4580-b602-5a15f141c052.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/cc0b18f1-39d1-4580-b602-5a15f141c052.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/685c012e-b603-41bb-9f76-d7e1cab76f53.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/0248a27d-0abf-4b74-a3c5-47a73e09098d.woff") format("woff"), url("https://shared.bayer.com/fonts/western/47657cdc-7580-4429-a42b-88917e1ee633.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/0cb85325-f0de-4961-88cd-36759752dddc.svg#0cb85325-f0de-4961-88cd-36759752dddc") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: italic;
+            font-weight: 100;
+            src: url("https://shared.bayer.com/fonts/western/b74c519b-e2f4-426d-983e-73e6179fb1c3.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/b74c519b-e2f4-426d-983e-73e6179fb1c3.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/176a80d2-cdc4-4f80-a617-24026f69062c.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/8591aeba-737a-4116-9397-585c23ebe051.woff") format("woff"), url("https://shared.bayer.com/fonts/western/e2fecb5c-a4e8-4326-99d3-04ccc5a2fe7b.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/04afbdb8-b0c5-4f69-ad0a-d225e45f8882.svg#04afbdb8-b0c5-4f69-ad0a-d225e45f8882") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: normal;
+            font-weight: 300;
+            src: url("https://shared.bayer.com/fonts/western/8827e223-8d96-4750-8b0c-8ef828fb1f0f.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/8827e223-8d96-4750-8b0c-8ef828fb1f0f.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/0128d8b7-d00b-4315-8daa-970f97ecac64.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/803af1a9-a09b-4de5-ba36-e3d228fb5bc4.woff") format("woff"), url("https://shared.bayer.com/fonts/western/831880ae-4958-487d-bc2f-aa2c1a0636e7.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/3513edb4-f4ad-4340-85e6-0cea8ca12237.svg#3513edb4-f4ad-4340-85e6-0cea8ca12237") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: italic;
+            font-weight: 300;
+            src: url("https://shared.bayer.com/fonts/western/f58764aa-e314-4f4f-bcd5-2feb02b22e08.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/f58764aa-e314-4f4f-bcd5-2feb02b22e08.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/6c334865-778f-4cb5-9b2e-cfdfb2d2c205.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/ca10c83d-ebd5-4705-8f95-673919515083.woff") format("woff"), url("https://shared.bayer.com/fonts/western/ab661d69-d776-4fbf-94fe-f7d2950ddc70.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/72289c2d-620c-4c18-93d5-5938530db5e3.svg#72289c2d-620c-4c18-93d5-5938530db5e3") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: normal;
+            font-weight: 400;
+            src: url("https://shared.bayer.com/fonts/western/285b0922-a3d2-4550-b29d-b4f74a9611e4.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/285b0922-a3d2-4550-b29d-b4f74a9611e4.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/823e6839-53d8-41b9-a5a1-5f05833acd12.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/92679273-9798-4d27-893b-d53dfd2bb4c7.woff") format("woff"), url("https://shared.bayer.com/fonts/western/e4fb2994-44c3-40fe-bec7-9c4fa593b799.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/ea22c7fc-8a36-484f-85e6-d014662a2273.svg#ea22c7fc-8a36-484f-85e6-d014662a2273") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: italic;
+            font-weight: 400;
+            src: url("https://shared.bayer.com/fonts/western/cd36001a-de1e-4773-adcf-a6e589f0705a.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/cd36001a-de1e-4773-adcf-a6e589f0705a.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/bcfc49d1-ee2f-4fcc-8322-99607f4a7007.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/fd783951-0929-49f5-9cdd-5b34008bb362.woff") format("woff"), url("https://shared.bayer.com/fonts/western/035a7d84-08c6-4e91-9dbc-a881c1d76333.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/553e1a25-3907-46e7-9bec-d7b74e7e05eb.svg#553e1a25-3907-46e7-9bec-d7b74e7e05eb") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: normal;
+            font-weight: 500;
+            src: url("https://shared.bayer.com/fonts/western/5abe98e8-3e80-4fd6-b27b-6ec4c6385461.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/5abe98e8-3e80-4fd6-b27b-6ec4c6385461.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/c86f4d57-4caf-4c6f-9554-7926dd67e3f1.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/92c69f6c-0185-4eb2-800e-1ee3947ca4dd.woff") format("woff"), url("https://shared.bayer.com/fonts/western/e11c48d3-bed3-4b35-9d1e-1a5c7afe80e3.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/394a4a67-cf1b-44ee-a02e-68dc9752d99e.svg#394a4a67-cf1b-44ee-a02e-68dc9752d99e") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: normal;
+            font-weight: 700;
+            src: url("https://shared.bayer.com/fonts/western/e276fe3d-01c5-4575-99f1-3fc0780d5417.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/e276fe3d-01c5-4575-99f1-3fc0780d5417.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/a61c00c6-86e7-4fa9-ac6b-476548df9cb8.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/7fd00069-f615-471e-8089-b0bab013cfd9.woff") format("woff"), url("https://shared.bayer.com/fonts/western/7c110d92-b5c8-416b-b5c6-5f1d6c3a720a.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/ee27a720-58cd-465f-b85c-1a5b5bdee597.svg#ee27a720-58cd-465f-b85c-1a5b5bdee597") format("svg")
+        }
+
+        @font-face {
+            font-family: "Neue Helvetica W01";
+            font-style: italic;
+            font-weight: 700;
+            src: url("https://shared.bayer.com/fonts/western/21a97ece-dadb-4f5e-98d9-51ebcbd7ac41.eot?#iefix");
+            src: url("https://shared.bayer.com/fonts/western/21a97ece-dadb-4f5e-98d9-51ebcbd7ac41.eot?#iefix") format("eot"), url("https://shared.bayer.com/fonts/western/6a88d203-cbbc-42e9-b4b7-195631718870.woff2") format("woff2"), url("https://shared.bayer.com/fonts/western/502de8c5-bac6-4ef6-9a65-4893fe147d51.woff") format("woff"), url("https://shared.bayer.com/fonts/western/05b43b63-059e-407d-96d0-fa69d2eb6ec2.ttf") format("truetype"), url("https://shared.bayer.com/fonts/western/440b047b-d7cc-44db-b119-817f01483587.svg#440b047b-d7cc-44db-b119-817f01483587") format("svg")
+        }
+
+        * {
+            font-family: "Neue Helvetica W01";
+        }
+    </style>
+    <style>
+        .container {
+            margin: 15px auto;
+        }
+
+            .container > label {
+                font-style: italic;
+                font-size: 25px;
+                border-bottom: 1px solid #f5f5f5;
+                color: #252724;
+                font-weight: 400;
+                width: 100%;
+            }
+
+            .container .form-group > div {
+                float: left;
+                margin: 0 15px 0 0;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>Inputs</label>
+        <div class="form-group fa fa-handshake-o">
+            <input value="campo de texto" />
+        </div>
+
+        <div class="form-group fa fa-handshake-o validationError">
+            <input value="campo inválido" />
+            <span class="validationMessage"><i class="fa fa-times-circle" aria-hidden="true"></i>Erro na validação do campo</span>
+        </div>
+    </div>
+    <div class="container">
+        <label>Dropdown Padrão</label>
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+    <div class="container">
+        <label>Dropdown Bootstrap</label>
+        <select class="bootstrap-select">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+    <div class="container">
+        <label>Checkbox</label>
+        <div class="form-group">
+            <input id="c1" type="checkbox" />
+            <label for="c1"></label>
+            Checkbox
+        </div>
+    </div>
+    <div class="container">
+        <label>Radio Button</label>
+        <div class="form-group">
+            <div>
+                <input id="r1" type="radio" name="radio" />
+                <label for="r1"></label>
+                Radio Button
+            </div>
+            <div>
+                <input id="r2" type="radio" name="radio" />
+                <label for="r2"></label>
+                Radio Button 2
+            </div>
+            <div>
+                <input id="r3" type="radio" name="radio" />
+                <label for="r3"></label>
+                Radio Button 3
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <label>Botões</label>
+        <div class="form-group">
+            <div>
+                <button type="button" class="btn btnPrincipal"><i class="fa fa-check" aria-hidden="true"></i><span>Botão Principal</span></button>
+                <button type="button" class="btn btnSecundario"><i class="fa fa-plus" aria-hidden="true"></i><span>Botão Secundário</span></button>
+                <button type="button" class="btn btnEspecial"><i class="fa fa-comment" aria-hidden="true"></i><span>Botão Especial</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <label>Datepicker</label>
+        <div class="form-group fa fa-calendar">
+            <input id="date" value="" />
+        </div>
+    </div>
+    <div class="container">
+        <label>Loader</label>
+        <div class="form-group">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/lib/moment/min/moment-with-locales.min.js"></script>
+    <script src="/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var options = { dayViewHeaderFormat: "D [de] MMMM, YYYY", viewMode: 'days', format: 'DD/MM/YYYY', locale: 'pt-br', widgetPositioning: { vertical: 'bottom' } };
+
+            $('#date').datetimepicker(options);
+
+            $('#date').datetimepicker().on("dp.update dp.show", function (event) {
+                //Remove a última linha de dias do calendário caso todos os dias sejam do próximo mês
+                if ($(".bootstrap-datetimepicker-widget .datepicker-days table tr:last td.new").length == 7) {
+                    $(".bootstrap-datetimepicker-widget .datepicker-days table tr:last").hide();
+                }
+            });
+
+            $('.form-group.fa-calendar').on('focus click', function () {
+                $(this).find('#date').data('DateTimePicker').show();
+            });
+
+            $('.bootstrap-select').selectpicker({
+                size: 4
+            });
+        });
+    </script>
+</body>
+</html>

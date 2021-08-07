@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_LayoutEmpty.cshtml" />
+    <Content Remove="wwwroot\PortalOne\js\portal-one - Backup.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="4.2.0" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.8.0" />
+    <PackageReference Include="EPPlus" Version="4.5.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Interfaces\" />
+    <Folder Include="Views\CFOPRegistration\" />
+    <Folder Include="Views\StockTransit\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\PortalOne\js\" />
+    <Folder Include="wwwroot\upload\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bayer.Pegasus.ApiClient\Bayer.Pegasus.ApiClient.csproj" />
+    <ProjectReference Include="..\Bayer.Pegasus.Business\Bayer.Pegasus.Business.csproj" />
+    <ProjectReference Include="..\Bayer.Pegasus.Entities\Bayer.Pegasus.Entities.csproj" />
+    <ProjectReference Include="..\Bayer.Pegasus.Utils\Bayer.Pegasus.Utils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\HealthCheck\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

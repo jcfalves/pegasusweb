@@ -1,0 +1,37 @@
+﻿<label>Tipo de Intervalo</label>
+<div>
+    <input id="r_ultimo" type="radio" name="tipo-intervalo" value="l" data-bind="checked:TypeDate" />
+    <label class="label-intervalo" for="r_ultimo"></label>
+    Últimos
+</div>
+<div>
+    <input id="r_ano" type="radio" name="tipo-intervalo" value="y" data-bind="checked:TypeDate" />
+    <label class="label-intervalo" for="r_ano"></label>
+    Ano
+</div>
+<div>
+    <input id="r_safra" type="radio" name="tipo-intervalo" value="c" data-bind="checked:TypeDate" />
+    <label class="label-intervalo" for="r_safra"></label>
+    Safra
+</div>
+<!--
+    Remoção do Filtro Bimestral.
+     Este filtro foi removido conforme a sprint 2.
+     Solicitação do P.O Marcelo.
+    Data: 12/02/2019
+    Programador: Jones Daniel
+<div>
+    <input id="r_bimestre" type="radio" name="tipo-intervalo" value="b" data-bind="checked:TypeDate" />
+    <label class="label-intervalo" for="r_bimestre"></label>
+    Bimestre
+</div>-->
+<div id="date-select-month">
+    <input id="r_mes" type="radio" name="tipo-intervalo" value="m" data-bind="checked:TypeDate" />
+    <label class="label-intervalo" for="r_mes"></label>
+    Mês
+</div>
+<div id="date-select-custom-date">
+    <input id="r_data" type="radio" name="tipo-intervalo" value="custom" data-bind="checked:TypeDate" />
+    <label class="label-intervalo" for="r_data"></label>
+    Data
+</div>

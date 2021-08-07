@@ -1,0 +1,40 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+<div class="wrap-row">
+    @if (Model.SalesStructureAccess.CanAccessMultiplePartners)
+    {
+        <div class="col-md-4 col-sm-6">
+            <label>Parceiro</label>
+            <div class="form-group fa fa-handshake-o" aria-hidden="true">
+                <input class="form-control tokenFieldInput" placeholder="" id="Sellout_Partners" data-bind="tokenField: Partners, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIPartner'" />
+                <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+            </div>
+        </div>
+    }
+    <div class="col-md-4 col-sm-6">
+        <label>Unidades (Lojas)</label>
+        <div class="form-group fa fa-shopping-cart" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="Sellout_Units" data-bind="tokenField: Units, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIUnit', Parent: 'partner', ParentValue: Partners()" />
+            <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+        </div>
+    </div>
+</div>
+<div class="wrap-row">
+    <div class="col-md-8" data-bind="with:ReportDateViewModel">
+        @{ Html.RenderPartial("ReportDate"); }
+    </div>
+</div>
+<div class="form-group col-md-12" id="form-tipos" data-bind="with:ReportDateViewModel">
+    @{ Html.RenderPartial("ReportDateSelectType"); }
+    <div id="salvar-analise" class="floatRight">
+        <div class="form-group">
+            <input id="r_salvar" type="checkbox" name="salvar-analise" data-bind="checked: $parent.ShouldSave" />
+            <label class="label-intervalo" for="r_salvar"></label>
+            Salvar Análise
+        </div>
+    </div>
+</div>
+
+<div class="form-buttons" id="buttonsRelatorio" runat="server" visible="false">
+    <button type="button" data-bind="click: GenerateChart" class="btn btn-cyan"><i class="fa fa-bar-chart" aria-hidden="true"></i><span>Gráfico</span></button>
+</div>
+

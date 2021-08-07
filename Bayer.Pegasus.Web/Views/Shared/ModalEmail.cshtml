@@ -1,0 +1,27 @@
+﻿<div class="modal fade" id="ModalEmail" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-envelope" aria-hidden="true"></span>Enviar E-mail</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form data-bind="submit: ProcessEmail">
+                    <div class="row">
+                        <div class="col-xs-12 halfside">
+                            <label>E-mail:</label>
+                            <div class="form-group" aria-hidden="true">
+                                <input class="form-control small-padding" id="EmailTo" placeholder="" data-bind="value: EmailTo">
+                            </div>
+                            <div class="form-buttons floatRight" id="buttonsAnalise" runat="server" visible="false">
+                                <button type="button" class="btn btn-pink" data-bind="click: ProcessEmail"><i class="fa fa-angle-double-right" aria-hidden="true"></i><span>Enviar E-mail</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

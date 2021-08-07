@@ -1,0 +1,54 @@
+﻿
+<div id="chart-results" class="row panel-filtros">
+    <div class="col-lg-12 title-row">
+        <h2 id="titleFiltro" runat="server" class="title-tab col-md-6 fa fa-angle-left" visible="false" data-open="filtro-consulta">Resultados</h2>
+        <div class="col-md-6 filtros-dados">
+            <button class="btn btnSecundario print-tab" aria-hidden="true"><i class="fa fa-print" aria-hidden="true"></i>Imprimir</button>
+        </div>
+    </div>
+
+    <div class="col-lg-12 formContent">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="resumo sembordas">
+                    <div class="grafico">
+                        <!-- ko foreach: ChartData -->
+                        <div class="item">
+                            <label data-bind="text: $data.description"></label>
+                            <div class="barra">
+                                <div class="progress-bar" data-bind="style: {'max-width': $data.pct }, attr: { 'data-tip': $data.formatQuantity }"></div>
+                            </div>
+                            <span class="valor" data-bind="text: $data.formatQuantity"></span>
+                            <span data-bind="text: ((accounting.toFixed(($data.percentageQuantity),2))+'%')" class="badge" style="background-color:#00bdff; width:60px; margin-left :-20%"></span>
+
+                        </div>
+                        <!-- /ko -->
+
+
+                    </div>
+                </div>
+                <a href="#" class="openCFOP" data-bind="click: CFOPViewModel.ShowModal">Clique aqui para saber quais CFOPS são consideradas. O preço é o praticado na nota fiscal.</a>
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div class="col-lg-12 formContent">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="panel">
+                        <p>Filtro(s) Aplicado(s):</p>
+                        <p><span id="FiltroAplicadoParc" style="font-weight: bold;"></span></p>
+                        <span id="FiltroAplicado">
+                        </span>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <!-- /.panel-body -->
+                <!-- /.panel -->
+            </div>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+@{ Html.RenderPartial("../Shared/ModalCFOP.cshtml"); }

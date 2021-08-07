@@ -1,0 +1,163 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+
+<div id="dashboard-content">
+    <div class="row col-md-12">
+        <div id="tabs-panel" class="tab-left">
+            <div class="tab active auto">
+                Visão Geral
+            </div>
+            <button class="btn btnSecundario print-tab" aria-hidden="true"><i class="fa fa-print" aria-hidden="true"></i>Imprimir</button>
+        </div>
+    </div>
+    <div class="row col-md-12">
+        <div class="filtros-dados">
+            <div class="periodo">
+
+                <a data-bind="click:IntervalDataChartByLast12Months, css: { ativo: IntervalDataChart() =='Last12Months' }" class="btn btn-default">Últimos 12 Meses</a>
+                <a data-bind="click:IntervalDataChartByYear, css: { ativo: IntervalDataChart() =='Year' }" class="btn btn-default">Ano</a>
+                <a data-bind="click:IntervalDataChartCustom, css: { ativo: IntervalDataChart() =='Custom' }" class="btn btn-default"><span class="fa fa-filter " aria-hidden="true"></span>&nbsp;&nbsp;Outras Opções</a>
+
+            </div>
+            <div class="tipo-dado">
+                <a data-bind="click:TypeDataChartByQuantity, css: { ativo: TypeDataChart() =='Quantity' }" class="btn btn-default">Quantidade</a>
+                <a data-bind="click:TypeDataChartByValue, css: { ativo: TypeDataChart() =='Value' }" class="btn btn-default">Valor</a>
+            </div>
+        </div>
+    </div>
+    <div class="row graficos">
+        <div id="sell-out">
+            <div class="col-md-8">
+                <div class="evolucao">
+                    <div class="title-grafico">
+                        <h2 class="title-tab">Evolução de Sell Out</h2>
+                        <span class="fa fa-filter filter-graph" aria-hidden="true" data-graph="SelloutEvolution"></span>
+                        <span class="fa fa-chevron-up collapse-graph" aria-hidden="true"></span>
+                    </div>
+                    <div class="wrap-grafico">
+                        <div class="grafico"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resumo">
+                    <div class="title-grafico">
+                        <h2 class="title-tab">Top Produtos em Sell Out</h2>
+                        <span class="fa fa-filter filter-graph" aria-hidden="true" data-graph="TopProducts"></span>
+                        <span class="fa fa-chevron-up collapse-graph" aria-hidden="true"></span>
+                    </div>
+                    <div id="contentTopProductsChart">
+                        <div class="grafico" data-bind="with:TopProductsViewModel">
+                            <!-- ko foreach: ChartData -->
+                            <div class="item">
+                                <label data-bind="text: $data.description"></label>
+                                <div class="barra">
+                                    <div class="progress-bar" data-bind="style: {'max-width': $data.pct }, attr: { 'data-tip': $data.formatKPI }"></div>
+                                </div>
+                                <span class="valor" data-bind="text: $data.formatKPI"></span>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="/PegasusReport/" class="link-relatorio">
+                    <i class="fa fa-database" aria-hidden="true"></i>Relatório de Movimento Detalhado
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row graficos">
+        <div id="estoque">
+            <div class="col-md-8">
+                <div class="evolucao">
+                    <div class="title-grafico">
+                        <h2 class="title-tab">Evolução de Estoque</h2>
+                        <span class="fa fa-filter filter-graph" aria-hidden="true" data-graph="StockEvolution"></span>
+                        <span class="fa fa-chevron-up collapse-graph" aria-hidden="true"></span>
+                    </div>
+                    <div class="wrap-grafico">
+                        <div class="grafico"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resumo">
+                    <div class="title-grafico">
+                        <h2 class="title-tab">Top Produtos em Estoque</h2>
+                        <span class="fa fa-filter filter-graph" aria-hidden="true" data-graph="TopStockProducts"></span>
+                        <span class="fa fa-chevron-up collapse-graph" aria-hidden="true"></span>
+                    </div>
+                    <div id="contentTopStockProductsChart">
+                        <div class="grafico" data-bind="with:TopStockProductsViewModel">
+                            <!-- ko foreach: ChartData -->
+                            <div class="item">
+                                <label data-bind="text: $data.description"></label>
+                                <div class="barra">
+                                    <div class="progress-bar" data-bind="style: {'max-width': $data.pct }, attr: { 'data-tip': $data.formatKPI }"></div>
+                                </div>
+                                <span class="valor" data-bind="text: $data.formatKPI"></span>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a href="/StockReport/" class="link-relatorio">
+                    <i class="fa fa-archive" aria-hidden="true"></i>Relatório de Fechamento de Estoque
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row graficos">
+        <div id="sell-out-estoque" class="col-md-12">
+            <div class="evolucao">
+                <div class="title-grafico">
+                    <h2 class="title-tab">Comparativo de Sell Out x Estoque</h2>
+                    <span class="fa fa-filter filter-graph" aria-hidden="true" data-graph="SelloutStock"></span>
+                    <span class="fa fa-chevron-up collapse-graph" aria-hidden="true"></span>
+                </div>
+                <div class="wrap-grafico">
+                    <div class="grafico"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="openCFOP" data-bind="click: CFOPViewModel.ShowModal">Clique aqui para saber quais CFOPS são consideradas. O preço é o praticado na nota fiscal.</a>
+    </div>
+</div>
+
+@{ Html.RenderPartial("../Shared/ModalCFOP.cshtml"); }
+@{ Html.RenderPartial("FilterModal.cshtml", Model); }
+@{ Html.RenderPartial("../SelloutEvolution/FilterModal.cshtml", Model); }
+@{ Html.RenderPartial("../TopProducts/FilterModal.cshtml", Model); }
+@{ Html.RenderPartial("../StockEvolution/FilterModal.cshtml", Model); }
+@{ Html.RenderPartial("../TopStockProducts/FilterModal.cshtml", Model); }
+@{ Html.RenderPartial("../SelloutStock/FilterModal.cshtml", Model); }
+
+@section scripts {
+    <script src="~/js/ViewModels/Shared/CFOPViewModel.js"></script>
+    <script src="~/js/ViewModels/SelloutEvolutionViewModel.js"></script>
+    <script src="~/js/ViewModels/TopProductsViewModel.js"></script>
+    <script src="~/js/ViewModels/StockEvolutionViewModel.js"></script>
+    <script src="~/js/ViewModels/TopStockProductsViewModel.js"></script>
+    <script src="~/js/ViewModels/SelloutStockViewModel.js"></script>
+    <script src="~/js/ViewModels/DashboardViewModel.js"></script>
+    <script src="~/js/ViewModels/MonitorViewModel.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            var viewModel = new DashboardViewModel();
+
+            ko.applyBindings(viewModel);
+
+            viewModel.GenerateDashboard(true);
+        });
+
+    </script>
+
+}

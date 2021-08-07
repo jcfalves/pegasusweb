@@ -1,0 +1,34 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+
+@{ Html.RenderPartial("Filter", Model); }
+
+@{ Html.RenderPartial("../Shared/Historic.cshtml"); }
+
+@{ Html.RenderPartial("ChartResults"); }
+
+
+@section scripts {
+
+    <script src="~/js/ViewModels/StockEvolutionViewModel.js"></script>
+
+    <script>
+        var viewModel = new StockEvolutionViewModel();
+
+        $(document).ready(function () {
+
+            ko.applyBindings(viewModel);
+
+            viewModel.HistoryViewModel.LoadData();
+        });
+
+    </script>
+
+    <style>
+        #date-select-month {
+            display: none;
+        }
+    </style>
+
+}

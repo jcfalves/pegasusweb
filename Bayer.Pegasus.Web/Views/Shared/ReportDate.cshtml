@@ -1,0 +1,87 @@
+﻿<div class="form-group form-report-date" id="form-intervalo" data-bind="fadeVisible:IsCustomDate()">
+    <label>Intervalo</label>
+    <div>
+        <div class="form-group fa fa-calendar" aria-hidden="true">
+            <input class="form-control datepicker" placeholder="" id="StartDate" data-bind="value: StartDate,datePicker: StartDate" />
+        </div>
+    </div>
+    <div>
+        <label class="lblIntervalo">até</label>
+        <div class="form-group fa fa-calendar" aria-hidden="true">
+            <input class="form-control datepicker" placeholder="" id="EndDate" data-bind="value: EndDate,datePicker: EndDate" />
+        </div>
+    </div>
+</div>
+
+<div class="form-group form-report-date" id="form-ano" data-bind="fadeVisible:IsYearDate()" style="display:none">
+    <label>Ano</label>
+    <select class="form-control miniselect" data-bind="value:YearDate, bootstrapSelect: YearDate">
+        @{
+            var listYear = (List<string>)ViewData["YearMoviment"];
+
+            if (listYear!=null)
+            {
+                foreach (var items in listYear)
+                {
+                    <option value="@items">@items</option>
+                }
+            }
+        }
+    </select>
+        
+</div>
+<div class="form-group form-report-date" id="form-trimestre" data-bind="fadeVisible:IsCropDate()" style="display:none">
+    <label>Safra</label>
+    <select class="form-control miniselect" data-bind="value:CropDate, bootstrapSelect: CropDate">
+        @{
+            var listYearYear = (List<string>)ViewData["YearYearMoviment"];
+
+            if (listYearYear != null)
+            {
+                foreach (var items in listYearYear)
+                {
+                    var valueOption = items.Split("/")[1];
+
+                    <option value="@valueOption">@items</option>
+                }
+            }
+        }
+    </select>
+</div>
+<!-- Remoção do Filtro Bimestral.
+     Este filtro foi removido conforme a sprint 2.
+     Solicitação do P.O Marcelo.
+    Data: 12/02/2019
+    Programador: Jones Daniel
+
+<div class="form-group form-report-date" id="form-bimestre" data-bind="fadeVisible:IsBiMonthDate()" style="display:none">
+    <label>Bimestre</label>
+    <select class="form-control miniselect" data-bind="value:BiMonthDate, bootstrapSelect: BiMonthDate">
+        @{
+
+
+            for (var bimonth = Bayer.Pegasus.Utils.DateUtils.GetNumberOfBimonths(System.DateTime.Now); bimonth >= 1; bimonth--)
+            {
+                <option value="@bimonth">@(bimonth)º Bimestre</option>
+            }
+        }
+
+    </select>
+</div>-->
+<div class="form-group form-report-date" id="form-mes" data-bind="fadeVisible:IsMonthDate()" style="display:none">
+    <label>Mês</label>
+    <div class="form-group fa fa-calendar" aria-hidden="true">
+        <input class="form-control" placeholder="" id="MonthDate" data-bind="value: MonthDate,datePicker: MonthDate, datePickerFormat: 'MM/YYYY', datePickerViewMode: 'months'" />
+    </div>
+</div>
+<div class="form-group form-report-date" id="form-ultimos" data-bind="fadeVisible:IsLastDate()">
+    <label>Últimos</label>
+    <div class="form-group form-report-date">
+        <input id="LastDate" class="form-control" placeholder="" data-bind="value:LastDate" />
+        <select class="form-control" data-bind="value:LastType, bootstrapSelect: LastType">
+            <option value="y">Anos</option>
+            <option value="m">Meses</option>
+            <option value="d">Dias</option>
+        </select>
+    </div>
+</div>

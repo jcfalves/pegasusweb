@@ -1,0 +1,53 @@
+﻿
+<div id="chart-results" class="row panel-filtros">
+    <div class="col-lg-12 title-row">
+        <h2 id="titleFiltro" runat="server" class="title-tab col-md-6 fa fa-angle-left" visible="false" data-open="filtro-consulta">Resultados</h2>
+        <div class="col-md-6 filtros-dados">
+            <div class="tipo-dado">
+                <a data-bind="click:TypeDataChartByQuantity, css: { ativo: TypeDataChart() =='Quantity' }" class="btn btn-default">Quantidade</a>
+                <a data-bind="click:TypeDataChartByValue, css: { ativo: TypeDataChart() =='Value' }" class="btn btn-default">Valor</a>
+            </div>
+            <button class="btn btnSecundario print-tab" aria-hidden="true"><i class="fa fa-print" aria-hidden="true"></i>Imprimir</button>
+        </div>
+    </div>
+
+    <div class="col-lg-12 formContent">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="resumo sembordas">
+                    <div class="grafico">
+                        <!-- ko foreach: ChartData -->
+                        <div class="item">
+                            <label data-bind="text: $data.description"></label>
+                            <div class="barra">
+                                <div class="progress-bar" data-bind="style: {'max-width': $data.pct }, attr: { 'data-tip': $data.formatKPI }"></div>
+                            </div>
+                            <span class="valor" data-bind="text: $data.formatKPI"></span>
+                        </div>
+                        <!-- /ko -->
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <div class="col-lg-12 formContent">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="panel">
+                        <p>Filtro(s) Aplicado(s):</p>
+                        <p><span id="FiltroAplicadoParc" style="font-weight: bold;"></span></p>
+                        <span id="FiltroAplicado">
+                        </span>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <!-- /.panel-body -->
+                <!-- /.panel -->
+            </div>
+        </div>
+    </div>
+</div>

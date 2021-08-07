@@ -1,0 +1,420 @@
+﻿/* Campos de Texto */
+/* Inclusão da classe .form-control para evitar conflitos de hierarquia com bootstrap e .tokenfield para estilizar também os campos usando o plugin de token definido por padrão */
+
+input, input.form-control, .tokenfield.form-control {
+    width: 100%;
+    background-color: #F5F5F5;
+    min-height: 40px;
+    padding: 0 12px 0 52px;
+    border: 1px solid #E4E4E4;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: 'Neue Helvetica W01';
+    box-shadow: none;
+}
+
+    input, input.form-control:focus {
+        border-color: #E4E4E4;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        outline: none;
+    }
+
+/* Estilo da área onde ficará o ícone do campo usando a classe form-group, que envolve o input seguindo o padrão de forms do Bootstrap */
+
+.form-group {
+    position: relative;
+}
+
+    .form-group:before {
+        height: 100%;
+        width: 47px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid #00BDFF;
+        border-radius: 3px 0 0 3px;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        background-color: #00BDFF;
+    }
+
+/* Campo com Erro de Validação */
+
+span.validationMessage {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    background-color: #F6074B;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 5px;
+    top: 100%;
+    left: 0;
+}
+
+    span.validationMessage i {
+        margin-right: 10px;
+    }
+
+.form-group.validationError {
+    margin-bottom: 35px;
+}
+
+    .form-group.validationError:before {
+        border: 1px solid #F6074B;
+        border-right: none;
+    }
+
+    .form-group.validationError input, .form-group.validationError input.form-control {
+        border-color: #F6074B;
+    }
+
+/* Botões */
+button.btn {
+    padding: 0 30px;
+    margin: 0 5px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    outline: 0 !important;
+    height: 40px;
+    line-height: 40px;
+}
+
+    button.btn > i {
+        margin-right: 10px;
+    }
+
+button.btnPrincipal, button.btnPrincipal:hover, button.btnPrincipal:focus {
+    background-color: #56D400;
+    color: #fff;
+}
+
+button.btnSecundario, button.btnSecundario:hover, button.btnSecundario:focus {
+    background-color: #F5F5F5;
+    color: #00B601;
+    border-color: #E4E4E4;
+}
+
+button.btnEspecial, button.btnEspecial:hover, button.btnEspecial:focus {
+    background-color: #6A4765;
+    color: #fff;
+}
+
+/* Radio Buttons e Checkboxes */
+
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+}
+
+    input[type="radio"] + label, input[type="checkbox"] + label {
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        display: block;
+        float: left;
+        margin: 0 5px 12px 0;
+        border: 2px solid #C2C6C9;
+        position: relative;
+    }
+
+    input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+        border-color: #00BDFF;
+    }
+
+    input[type="radio"]:checked + label {
+        background: #00BDFF;
+    }
+
+    input[type="radio"] + label {
+        border-radius: 20px;
+    }
+
+    input[type="checkbox"] + label {
+        border-radius: 3px;
+    }
+
+    input[type="radio"] + label:before {
+        content: " ";
+        width: 21px;
+        height: 21px;
+        display: block;
+        float: left;
+        margin: 0 5px 12px 0;
+        border: 5px solid #fff;
+        border-radius: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+
+    input[type="checkbox"]:checked + label:before {
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f00c";
+        color: #00BDFF;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+/* Select/Dropdown */
+
+select, select.form-control {
+    background-color: #F5F5F5;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 0 12px 0 20px;
+    min-height: 40px;
+    min-width: 150px;
+    font-weight: 700;
+    color: #272926;
+    /*customizando a seta*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #272926 50%), linear-gradient(135deg, #272926 50%, transparent 50%), linear-gradient(to right, #F5F5F5, #F5F5F5);
+    background-position: calc(100% - 23px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 8px 8px, 8px 8px, 3.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+    select:focus, select.form-control:focus {
+        outline: none;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+/* Dropdown Bootstrap */
+
+.dropdown {
+    width: 200px;
+}
+
+button.btn.dropdown-toggle.btn-default,
+button.btn.dropdown-toggle.btn-default:focus,
+button.btn.dropdown-toggle.btn-default:active,
+button.btn.dropdown-toggle.btn-default:hover {
+    margin: 0;
+    border-color: #F5F5F5;
+    border-radius: 2px;
+    color: #000;
+    background-color: #F5F5F5;
+    min-height: 40px;
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0 28px;
+    outline: 0 !important;
+    box-shadow: none;
+}
+
+    button.btn.dropdown-toggle.btn-default span,
+    .dropdown-menu > li > a:focus,
+    .dropdown-menu > li > a:hover {
+        outline: 0;
+    }
+
+.bootstrap-select .dropdown-menu {
+    border: none;
+    border-radius: 2px;
+    background-color: #F5F5F5;
+    width: 100%;
+    max-height: 140px;
+    overflow: auto;
+    margin-top: 5px;
+    padding: 0;
+}
+
+    .bootstrap-select .dropdown-menu li > a {
+        font-weight: 700;
+        padding: 5px 30px;
+        width: 100%;
+        outline: 0;
+        float: left;
+        color: #000;
+    }
+
+        .bootstrap-select .dropdown-menu li > a:hover {
+            color: #00AFF2;
+            background-color: #FBFBFB;
+        }
+
+.bootstrap-select span.caret {
+    border: none;
+}
+
+    .bootstrap-select span.caret:before {
+        content: "\f107";
+        font: normal normal normal 14px/1 FontAwesome;
+        position: absolute;
+        font-size: 25px;
+        font-weight: 700;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%);
+        margin-left: 10px;
+    }
+
+.bootstrap-select.open span.caret:before {
+    content: "\f106";
+}
+
+/* Bootstrap Datepicker */
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 250px;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days table {
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+}
+
+.bootstrap-datetimepicker-widget table tr td.active, .bootstrap-datetimepicker-widget table tr td.active:hover {
+    background-color: #00B700;
+    border-radius: 100%;
+    padding: 8px 0px;
+}
+
+.bootstrap-datetimepicker-widget table th {
+    text-transform: uppercase;
+}
+
+.bootstrap-datetimepicker-widget table td.day.old, .bootstrap-datetimepicker-widget table td.day.new {
+    color: #C5C9D4;
+}
+
+.bootstrap-datetimepicker-widget table td.day {
+    color: #20242D;
+    line-height: 14px;
+    height: 30px;
+    width: 10px;
+    font-size: 12px;
+}
+
+    .bootstrap-datetimepicker-widget table td.day.active {
+        color: #fff;
+        line-height: initial;
+    }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:after, .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+    display: none;
+}
+
+.bootstrap-datetimepicker-widget table td.active.today:before {
+    display: none;
+}
+
+.bootstrap-datetimepicker-widget table th {
+    text-transform: none;
+}
+
+.datepicker .prev, .datepicker .next {
+    color: #B0C1C9;
+}
+
+.datepicker thead tr:first-child {
+    border-bottom: 1px solid #ECF1F5;
+}
+
+.datepicker thead tr:last-child th {
+    color: #67717B;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+/* Mensagem de erro usando o Toastr */
+
+#toast-container {
+    top: 25px;
+}
+
+    #toast-container.toast-top-center > .toast, #toast-container.toast-top-center > .toast:hover {
+        padding: 15px;
+        background-image: none !important;
+        opacity: 1;
+        z-index: 1000000;
+        overflow: visible;
+        -moz-box-shadow: 0 0 0 #999;
+        -webkit-box-shadow: 0 0 0 #999;
+        box-shadow: 0 0 0 #999;
+    }
+
+    #toast-container.toast-top-center > .toast-error, #toast-container.toast-top-center > .toast-error:hover {
+        background-color: #F6074B;
+    }
+
+    #toast-container .toast:before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        text-align: center;
+        padding-top: 6px;
+    }
+
+    #toast-container .toast-error:before {
+        background-color: #F6074B;
+        color: #fff;
+        content: "\f071";
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+
+button.toast-close-button {
+    opacity: 1;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+/* Loader */
+
+.loader {
+    display: table;
+    margin: 0 auto 100px auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #104A62;
+    border-right: 16px solid #104A62;
+    border-bottom: 16px solid #104A62;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

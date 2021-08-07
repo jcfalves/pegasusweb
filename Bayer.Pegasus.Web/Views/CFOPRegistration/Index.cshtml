@@ -1,0 +1,17 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+@{ Html.RenderPartial("Filter", Model); }
+
+@section scripts {     
+    <script src="~/js/ViewModels/CFOPRegistrationViewModel.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var viewModel = new CFOPRegistrationViewModel();
+            viewModel.GetListCFOPRegistration();
+            ko.applyBindings(viewModel);
+        });
+
+    </script>
+}

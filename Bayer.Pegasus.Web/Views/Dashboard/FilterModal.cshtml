@@ -1,0 +1,57 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+<div class="modal fade" id="modalDashboard" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab">Dashboard</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="halfside col-md-12">
+
+                        <div class="wrap-row">
+                            @if (!Model.SalesStructureAccess.IsPartner)
+                            {
+                                <div class="col-md-4 col-sm-6">
+                                    <label>Parceiro</label>
+                                    <div class="form-group fa fa-handshake-o" aria-hidden="true">
+                                        <input class="form-control tokenFieldInput" placeholder="" id="Dashboard_Partners" data-bind="tokenField: Partners, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIPartner'" />
+                                        <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+                                    </div>
+                                </div>
+                            }
+                            <div class="col-md-4 col-sm-6">
+                                <label>Unidades (Lojas)</label>
+                                <div class="form-group fa fa-shopping-cart" aria-hidden="true">
+                                    <input class="form-control tokenFieldInput" placeholder="" id="Dashboard_Units" data-bind="tokenField: Units, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIUnit', Parent: 'partner', ParentValue: Partners()" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-row">
+                            <div class="col-md-8" data-bind="with:ReportDateViewModel">
+                                @{ Html.RenderPartial("ReportDate"); }
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12" id="form-tipos" data-bind="with:ReportDateViewModel">
+                            @{ Html.RenderPartial("ReportDateSelectType"); }
+
+                        </div>
+
+                        <div class="form-buttons" id="buttonsRelatorio" runat="server" visible="false">
+                            <button type="button" data-bind="click: GenerateChartDashboard" class="btn btn-cyan"><i class="fa fa-bar-chart" aria-hidden="true"></i><span>Gráfico</span></button>
+                        </div>
+
+
+                    </div>
+                    </div>                
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

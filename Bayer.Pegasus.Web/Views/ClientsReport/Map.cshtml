@@ -1,0 +1,51 @@
+﻿<div id="map-results" class="row panel-filtros map-results">
+    <div class="col-lg-12 title-row">
+        <h2 id="titleFiltro" runat="server" class="title-tab col-md-6 fa fa-angle-left" visible="false" data-open="filtro-consulta">Resultados</h2>
+        <button class="btn btnSecundario print-tab" aria-hidden="true"><i class="fa fa-print" aria-hidden="true"></i>Imprimir</button>
+    </div>
+    <div class="col-lg-12 formContent">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div id="mapdiv"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <a href="#" class="openCFOP" data-bind="click: CFOPViewModel.ShowModal">Clique aqui para saber quais CFOPS são consideradas. O preço é o praticado na nota fiscal.</a>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+
+        <div class="formContent map-resumo">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Resumo</h2>
+                            <ul id="DadosResumo" class="resumo-info">
+                                <li><strong>Perdidos</strong>: <span data-bind="text: Totals().TotalLost"></span></li>
+                                <li><strong>Leais</strong>: <span data-bind="text: Totals().TotalLoyal"></span></li>
+                                <li><strong>Retidos</strong>: <span data-bind="text: Totals().TotalRetained"></span></li>
+                                <li><strong>Adquiridos</strong>: <span data-bind="text: Totals().TotalAcquired"></span></li>
+                                <li><strong>Readquiridos</strong>: <span data-bind="text: Totals().TotalReacquired"></span></li>
+                            </ul>
+                            <div class="form-buttons">
+                                <button type="button" data-bind="click: GenerateExcel" class="btn btnPrincipal"><i class="fa fa-file-excel-o" aria-hidden="true"></i><span>Gerar Excel</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+@{ Html.RenderPartial("../Shared/ModalCFOP.cshtml"); }

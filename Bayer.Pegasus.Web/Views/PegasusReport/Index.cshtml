@@ -1,0 +1,32 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+@{
+    ViewData["Title"] = "Relatório de Movimentos Pegasus";
+}
+
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+
+@{ Html.RenderPartial("Filter"); }
+
+@{ Html.RenderPartial("../Shared/Historic.cshtml"); }
+
+@{ Html.RenderPartial("../Shared/ModalEmail.cshtml"); }
+
+@section scripts {
+
+    <script src="~/js/ViewModels/Shared/PivotViewModel.js"></script>
+    <script src="~/js/ViewModels/PegasusReportViewModel.js"></script>
+
+    <script>
+
+        var viewModel = new PegasusReportViewModel();
+        $(document).ready(function () {
+
+            ko.applyBindings(viewModel);
+
+            viewModel.HistoryViewModel.LoadData();
+        });
+
+    </script>
+
+}

@@ -1,0 +1,71 @@
+﻿<div class="modal fade" id="ModalCFOP" role="dialog" data-bind="with:CFOPViewModel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab">CFOPs</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+                                <div class="row">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#credit">Crédito</a></li>
+                                        <li><a data-toggle="tab" href="#debit">Débito</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="credit" class="tab-pane fade in active">
+                                            <h3>CFOPs que somam</h3>
+                                            <div class="table-wrapper">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Código</th>
+                                                            <th>Descrição</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody data-bind="foreach: CFOPsCredit">
+                                                        <tr>
+                                                            <td data-bind="text: code"></td>
+                                                            <td data-bind="text: description"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="debit" class="tab-pane fade">
+                                            <h3>CFOPs que debitam</h3>
+                                            <div class="table-wrapper">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Código</th>
+                                                            <th>Descrição</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody data-bind="foreach: CFOPsDebit">
+                                                        <tr>
+                                                            <td data-bind="text: code"></td>
+                                                            <td data-bind="text: description"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

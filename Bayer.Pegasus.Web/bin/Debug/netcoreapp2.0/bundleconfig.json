@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/knockoutjs-tokenfield/dist/knockoutjs-tokenfield.min.js",
+    "inputFiles": [
+      "wwwroot/lib/knockoutjs-tokenfield/dist/knockoutjs-tokenfield.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.min.js",
+    "inputFiles": [
+      "wwwroot/lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"
+    ]
+  }
+]

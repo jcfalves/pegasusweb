@@ -1,0 +1,27 @@
+﻿[
+  {
+    "code": "Mirena",
+    "description": "Mirena",
+    "value": "53.000",
+    "pct":  "100%"
+  },
+  {
+    "code": "Coppertone",
+    "description": "Coppertone",
+    "value": "23.000",
+    "pct": "55%"
+  },
+  {
+    "code": "Yaz",
+    "description": "Yaz",
+    "value": "3.000",
+    "pct": "15%"
+  },
+  {
+    "code": "Adalat",
+    "description": "Adalat",
+    "value": "3.000",
+    "pct": "15%"
+  }
+]
+

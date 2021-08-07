@@ -1,0 +1,67 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+<div class="wrap-row">
+    @if (Model.SalesStructureAccess.CanAccessMultiplePartners)
+    {
+        <div class="col-md-4 col-sm-6">
+            <label>Parceiro</label>
+            <div class="form-group fa fa-handshake-o" aria-hidden="true">
+                <input class="form-control tokenFieldInput" placeholder="" id="PegasusReport_Partners" data-bind="tokenField: Partners, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIPartner'" />
+                <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+            </div>
+        </div>
+    }
+    <div class="col-md-4 col-sm-6">
+        <label>Unidades (Lojas)</label>
+        <div class="form-group fa fa-shopping-cart" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="PegasusReport_Units" data-bind="tokenField: Units, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIUnit', Parent: 'partner', ParentValue: Partners()" />
+            <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <label>Cliente</label>
+        <div class="form-group fa fa-male" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="PegasusReport_Clients" data-bind="tokenField: Clients, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIClient', Parent: 'partner', ParentValue: Partners()" />
+        </div>
+    </div>
+</div>
+<div class="wrap-row">
+    <div class="col-md-4 col-sm-6">
+        <label>Marca</label>
+        <div class="form-group fa fa-registered" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="PegasusReport_Brands" data-bind="tokenField: Brands, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIBrand'" />
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <label>Produto</label>
+        <div class="form-group fa fa-tag" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="PegasusReport_Products" data-bind="tokenField: Products, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIProduct', Parent: 'brand', ParentValue: Brands()" />
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <label>Cidade</label>
+        <div class="form-group fa fa-map-marker" aria-hidden="true" id="f_cidade">
+            <input class="form-control tokenFieldInput" placeholder="" id="PegasusReport_Cities" data-bind="tokenField: Cities, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPICity'" />
+        </div>
+    </div>
+</div>
+<div class="wrap-row">
+    <div class="col-md-8" data-bind="with:ReportDateViewModel">
+        @{ Html.RenderPartial("ReportDate"); }
+    </div>
+</div>
+<div class="form-group col-md-12" id="form-tipos" data-bind="with:ReportDateViewModel">
+    @{ Html.RenderPartial("ReportDateSelectType"); }
+    <div id="salvar-analise" class="floatRight">
+        <div class="form-group">
+            <input id="r_salvar" type="checkbox" name="salvar-analise" data-bind="checked: $parent.ShouldSave" />
+            <label class="label-intervalo" for="r_salvar"></label>
+            Salvar Análise
+        </div>
+    </div>
+</div>
+
+<div class="form-buttons" id="buttonsRelatorio" runat="server" visible="false">
+    <button type="button" data-bind="click: GenerateExcel" class="btn btnPrincipal"><i class="fa fa-file-excel-o" aria-hidden="true"></i><span>Gerar Excel</span></button>
+    <button type="button" data-bind="click: GeneratePivot" class="btn btn-blue"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>Pivot</span></button>
+    <button type="button" data-bind="click: SendEmail" class="btn btnSecundario"><i class="fa fa-envelope" aria-hidden="true"></i><span>E-mail</span></button>
+</div>

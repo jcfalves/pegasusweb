@@ -1,0 +1,31 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+@{ Html.RenderPartial("../Shared/Header.cshtml", Model); }
+
+@{ Html.RenderPartial("Filter", Model); }
+
+@if (!Model.SalesStructureAccess.IsPartner)
+{
+    Html.RenderPartial("../Shared/Historic.cshtml"); 
+}
+
+<div id="report-results" class="row panel-filtros">
+
+</div>
+
+@section scripts {
+
+    <script src="~/js/ViewModels/AcceraViewModel.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            var viewModel = new AcceraViewModel();
+
+            ko.applyBindings(viewModel);
+
+            viewModel.HistoryViewModel.LoadData();
+        });
+
+    </script>
+
+}

@@ -1,0 +1,502 @@
+﻿[
+  {
+    "value": 1,
+    "label": "Isyangulovo",
+    "partner": 9
+  },
+  {
+    "value": 2,
+    "label": "Qasr Abu Hadi",
+    "partner": 8
+  },
+  {
+    "value": 3,
+    "label": "Hennenman",
+    "partner": 7
+  },
+  {
+    "value": 4,
+    "label": "Mandor",
+    "partner": 4
+  },
+  {
+    "value": 5,
+    "label": "Skatepark",
+    "partner": 6
+  },
+  {
+    "value": 6,
+    "label": "Melrose",
+    "partner": 1
+  },
+  {
+    "value": 7,
+    "label": "Leleque",
+    "partner": 6
+  },
+  {
+    "value": 8,
+    "label": "Khairiahmandah",
+    "partner": 6
+  },
+  {
+    "value": 9,
+    "label": "Laspezia",
+    "partner": 9
+  },
+  {
+    "value": 10,
+    "label": "San Rafael",
+    "partner": 3
+  },
+  {
+    "value": 11,
+    "label": "Zangzhai",
+    "partner": 9
+  },
+  {
+    "value": 12,
+    "label": "Kävlinge",
+    "partner": 10
+  },
+  {
+    "value": 13,
+    "label": "Huangbei",
+    "partner": 6
+  },
+  {
+    "value": 14,
+    "label": "Lukou",
+    "partner": 7
+  },
+  {
+    "value": 15,
+    "label": "Karlstad",
+    "partner": 1
+  },
+  {
+    "value": 16,
+    "label": "Bratislava",
+    "partner": 10
+  },
+  {
+    "value": 17,
+    "label": "Judaydah",
+    "partner": 4
+  },
+  {
+    "value": 18,
+    "label": "Kampunganyar",
+    "partner": 5
+  },
+  {
+    "value": 19,
+    "label": "Santa Eulalia",
+    "partner": 1
+  },
+  {
+    "value": 20,
+    "label": "München",
+    "partner": 6
+  },
+  {
+    "value": 21,
+    "label": "Győr",
+    "partner": 6
+  },
+  {
+    "value": 22,
+    "label": "Chonchi",
+    "partner": 1
+  },
+  {
+    "value": 23,
+    "label": "Wolin",
+    "partner": 3
+  },
+  {
+    "value": 24,
+    "label": "Pau",
+    "partner": 6
+  },
+  {
+    "value": 25,
+    "label": "Aqaba",
+    "partner": 4
+  },
+  {
+    "value": 26,
+    "label": "Yahil’nytsya",
+    "partner": 7
+  },
+  {
+    "value": 27,
+    "label": "Banjar Tegal Belodan",
+    "partner": 3
+  },
+  {
+    "value": 28,
+    "label": "Bošovice",
+    "partner": 1
+  },
+  {
+    "value": 29,
+    "label": "Chalan Pago-Ordot Village",
+    "partner": 2
+  },
+  {
+    "value": 30,
+    "label": "Piñahan",
+    "partner": 8
+  },
+  {
+    "value": 31,
+    "label": "Kalkara",
+    "partner": 5
+  },
+  {
+    "value": 32,
+    "label": "Val-de-Reuil",
+    "partner": 1
+  },
+  {
+    "value": 33,
+    "label": "Xiyang",
+    "partner": 3
+  },
+  {
+    "value": 34,
+    "label": "Muang Sam Sip",
+    "partner": 3
+  },
+  {
+    "value": 35,
+    "label": "Kezileboyi",
+    "partner": 2
+  },
+  {
+    "value": 36,
+    "label": "Zhouzhuang",
+    "partner": 3
+  },
+  {
+    "value": 37,
+    "label": "Deep River",
+    "partner": 2
+  },
+  {
+    "value": 38,
+    "label": "Orahovac",
+    "partner": 10
+  },
+  {
+    "value": 39,
+    "label": "Jingling",
+    "partner": 9
+  },
+  {
+    "value": 40,
+    "label": "Mirnyy",
+    "partner": 5
+  },
+  {
+    "value": 41,
+    "label": "Shimo-furano",
+    "partner": 7
+  },
+  {
+    "value": 42,
+    "label": "Masingbi",
+    "partner": 1
+  },
+  {
+    "value": 43,
+    "label": "Ḩawf",
+    "partner": 10
+  },
+  {
+    "value": 44,
+    "label": "Tandou",
+    "partner": 4
+  },
+  {
+    "value": 45,
+    "label": "Kampungbaru",
+    "partner": 3
+  },
+  {
+    "value": 46,
+    "label": "Kosti",
+    "partner": 3
+  },
+  {
+    "value": 47,
+    "label": "Blarney",
+    "partner": 3
+  },
+  {
+    "value": 48,
+    "label": "San Nicolas",
+    "partner": 7
+  },
+  {
+    "value": 49,
+    "label": "Kaiama",
+    "partner": 8
+  },
+  {
+    "value": 50,
+    "label": "Bukama",
+    "partner": 1
+  },
+  {
+    "value": 51,
+    "label": "Dom Pedro",
+    "partner": 7
+  },
+  {
+    "value": 52,
+    "label": "Tangdukou",
+    "partner": 5
+  },
+  {
+    "value": 53,
+    "label": "Tegalgunung",
+    "partner": 9
+  },
+  {
+    "value": 54,
+    "label": "Guangdu",
+    "partner": 6
+  },
+  {
+    "value": 55,
+    "label": "Lyubeshiv",
+    "partner": 9
+  },
+  {
+    "value": 56,
+    "label": "Upata",
+    "partner": 2
+  },
+  {
+    "value": 57,
+    "label": "Cavaillon",
+    "partner": 6
+  },
+  {
+    "value": 58,
+    "label": "Tobatí",
+    "partner": 5
+  },
+  {
+    "value": 59,
+    "label": "Kokkini Trimithia",
+    "partner": 7
+  },
+  {
+    "value": 60,
+    "label": "Koson Shahri",
+    "partner": 2
+  },
+  {
+    "value": 61,
+    "label": "Chezhan",
+    "partner": 3
+  },
+  {
+    "value": 62,
+    "label": "Fusagasuga",
+    "partner": 2
+  },
+  {
+    "value": 63,
+    "label": "Penaraga",
+    "partner": 1
+  },
+  {
+    "value": 64,
+    "label": "Yonghe",
+    "partner": 7
+  },
+  {
+    "value": 65,
+    "label": "Kanlagay",
+    "partner": 10
+  },
+  {
+    "value": 66,
+    "label": "Bangui",
+    "partner": 2
+  },
+  {
+    "value": 67,
+    "label": "Krajan",
+    "partner": 5
+  },
+  {
+    "value": 68,
+    "label": "Gimbi",
+    "partner": 5
+  },
+  {
+    "value": 69,
+    "label": "Diriamba",
+    "partner": 10
+  },
+  {
+    "value": 70,
+    "label": "Dougang",
+    "partner": 9
+  },
+  {
+    "value": 71,
+    "label": "Ronggo",
+    "partner": 1
+  },
+  {
+    "value": 72,
+    "label": "Chur",
+    "partner": 5
+  },
+  {
+    "value": 73,
+    "label": "Vimieiro",
+    "partner": 9
+  },
+  {
+    "value": 74,
+    "label": "Sernovodsk",
+    "partner": 6
+  },
+  {
+    "value": 75,
+    "label": "Coquitlam",
+    "partner": 1
+  },
+  {
+    "value": 76,
+    "label": "Georgetown",
+    "partner": 2
+  },
+  {
+    "value": 77,
+    "label": "Clervaux",
+    "partner": 3
+  },
+  {
+    "value": 78,
+    "label": "Tayginka",
+    "partner": 10
+  },
+  {
+    "value": 79,
+    "label": "Paraguaçu",
+    "partner": 8
+  },
+  {
+    "value": 80,
+    "label": "Zhantang",
+    "partner": 3
+  },
+  {
+    "value": 81,
+    "label": "Senneterre",
+    "partner": 3
+  },
+  {
+    "value": 82,
+    "label": "Montauban",
+    "partner": 6
+  },
+  {
+    "value": 83,
+    "label": "Setaka",
+    "partner": 6
+  },
+  {
+    "value": 84,
+    "label": "Mengmeng",
+    "partner": 8
+  },
+  {
+    "value": 85,
+    "label": "Providencia",
+    "partner": 1
+  },
+  {
+    "value": 86,
+    "label": "Svalöv",
+    "partner": 2
+  },
+  {
+    "value": 87,
+    "label": "Cocachacra",
+    "partner": 8
+  },
+  {
+    "value": 88,
+    "label": "Longyearbyen",
+    "partner": 8
+  },
+  {
+    "value": 89,
+    "label": "Alberton",
+    "partner": 4
+  },
+  {
+    "value": 90,
+    "label": "Changhao",
+    "partner": 10
+  },
+  {
+    "value": 91,
+    "label": "Saratamata",
+    "partner": 9
+  },
+  {
+    "value": 92,
+    "label": "Baton Rouge",
+    "partner": 7
+  },
+  {
+    "value": 93,
+    "label": "Westonaria",
+    "partner": 8
+  },
+  {
+    "value": 94,
+    "label": "Villach",
+    "partner": 6
+  },
+  {
+    "value": 95,
+    "label": "San Pedro Jocopilas",
+    "partner": 6
+  },
+  {
+    "value": 96,
+    "label": "Lagarto",
+    "partner": 8
+  },
+  {
+    "value": 97,
+    "label": "Baise City",
+    "partner": 6
+  },
+  {
+    "value": 98,
+    "label": "Al Jahrā’",
+    "partner": 9
+  },
+  {
+    "value": 99,
+    "label": "Nikolayevsk",
+    "partner": 4
+  },
+  {
+    "value": 100,
+    "label": "Chartres",
+    "partner": 2
+  }
+]

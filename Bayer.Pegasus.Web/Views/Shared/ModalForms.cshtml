@@ -1,0 +1,81 @@
+﻿<div class="modal fade" id="ModalAnalise" role="dialog" data-bind="with:HistoryViewModel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-wrench" aria-hidden="true"></span>Salvar Análise</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form data-bind="submit: Save">
+                    <div class="row">
+                        <div class="col-xs-12 halfside">
+                            <label>Nome:</label>
+                            <div class="form-group" aria-hidden="true">
+                                <input class="form-control small-padding" id="AnalysisName" placeholder="" data-bind="value: Name">
+                            </div>
+                            <div class="form-buttons floatRight" id="buttonsAnalise" runat="server" visible="false">
+                                <button type="button" class="btn btn-pink" data-bind="click: Save"><i class="fa fa-check-square" aria-hidden="true"></i><span>Salvar</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalExcel" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-file-excel-o" aria-hidden="true"></span>Exportar para Excel</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 status-excel" id="LoadingExcel">
+                        <img src="~/images/loading-excel.gif" />
+                        <span>Realizando processamento das informações</span>
+                    </div>
+                    <div class="col-md-12 status-excel" id="LoadedExcel">
+                        <a href="" id="linkExcelDownloaded">
+                            <img src="~/images/arquivo.jpg" />
+                            <span>Clique aqui para realizar o download</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalSpinner" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-archive" aria-hidden="true"></span>Carregando</h2>
+                    @*<span class="fechar-modal" data-dismiss="modal">x</span>*@
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 status-excel" id="LoadingExcel">
+                        <img src="~/images/loading-excel.gif" />
+                        <span>Realizando processamento das informações</span>
+                    </div>
+                    @*<div class="col-md-12 status-excel" id="LoadedExcel">
+                        <a href="" id="linkExcelDownloaded">
+                            <img src="~/images/arquivo.jpg" />
+                            <span>Clique aqui para realizar o download</span>
+                        </a>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

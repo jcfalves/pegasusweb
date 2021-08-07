@@ -1,0 +1,14 @@
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Data.deps.json
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Data.dll
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Data.pdb
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Entities.dll
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Utils.dll
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Entities.pdb
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\bin\Debug\netcoreapp2.1\Bayer.Pegasus.Utils.pdb
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.csprojAssemblyReference.cache
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.AssemblyInfoInputs.cache
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.AssemblyInfo.cs
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.csproj.CoreCompileInputs.cache
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.csproj.CopyComplete
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.dll
+C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Data\obj\Debug\netcoreapp2.1\Bayer.Pegasus.Data.pdb

@@ -1,0 +1,49 @@
+﻿<div class="wrap-row">
+    <div class="col-md-12">
+
+        <div style="WIDTH: 100%; FLOAT: left">
+            <div style="WIDTH: 100%; FLOAT: left">
+                <div style="WIDTH: 100%; float: left">
+
+                    @*<div class="form-group" id="form-tipos">
+                            <button class="button button1" id="btnProcessaTotal"
+                                    data-bind="click: ProcessaTotal">
+                                Processamento Total
+                            </button>
+                            <button class="button button1" id="btnProcessaParcial"
+                                    data-bind="click: ProcessaParcial">
+                                Processamento Parcial
+                            </button>
+                            <button class="button button1" id="btnCancelaAcao"
+                                    data-bind="click: CancelaAcao">
+                                Cancelar Ação
+                            </button>
+                            <button class="button button1" style="background-color:red"  id="btnExcluiAcao"
+                                    data-bind="click: ExcluiAcao">
+                                Excluir
+                            </button>
+                        </div>
+                    </div>*@
+
+                    <div class="form-group" id="form-tipos">
+                        <button class="button button1"
+                                data-bind="click: function (data) { AcaoArquivos('1', data) }">
+                            Processamento Total
+                        </button>
+                        <button class="button button1"
+                                data-bind="click: function (data) { AcaoArquivos('2', data) }">
+                            Processamento Parcial
+                        </button>
+                        <button class="button button1"
+                                data-bind="click: function (data) { AcaoArquivos('4', data) }">
+                            Cancelar Ação
+                        </button>
+                        <button class="button button1" style="background-color:red"
+                                data-bind="click: function (data) { AcaoArquivos('3', data) }">
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

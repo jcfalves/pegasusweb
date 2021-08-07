@@ -1,0 +1,16 @@
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.deps.json
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.Data.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.Entities.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.Utils.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.Data.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.Entities.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\bin\Release\netcoreapp2.0\Bayer.Pegasus.Utils.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.csprojAssemblyReference.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.csproj.CoreCompileInputs.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.AssemblyInfoInputs.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.AssemblyInfo.cs
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.csproj.CopyComplete
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.ApiClient\obj\Release\netcoreapp2.0\Bayer.Pegasus.ApiClient.pdb

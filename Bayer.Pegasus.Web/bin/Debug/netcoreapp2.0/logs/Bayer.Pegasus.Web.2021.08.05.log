@@ -1,0 +1,872 @@
+DEBUG 2021-08-05 09:09:27 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:09:27 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:09:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:09:27 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:09:27 - IV-USER: 
+DEBUG 2021-08-05 09:09:27 - PD-UID: 
+DEBUG 2021-08-05 09:09:27 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:09:27 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:09:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:09:27 - LoggedBaseController.AuthenticationError() (Início)
+DEBUG 2021-08-05 09:09:27 - LoggedBaseController.AuthenticationError() - Redirect para a LoginURL: /PortalOne/login.html
+DEBUG 2021-08-05 09:09:27 - LoggedBaseController.AuthenticationError() (Fim)
+DEBUG 2021-08-05 09:10:05 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:05 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:06 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-05 09:10:06 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:06 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-05 09:10:06 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-05 09:10:06 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:10:06 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-05 09:10:06 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:10:06 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:10:06 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:10:08 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-05 09:10:08 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"63035ba3-e189-3f0a-accb-fa993fc13c20","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-05 09:10:08 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:10:08 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-05 09:10:08 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-05 09:10:08 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:08 - AuthenticationBO.Login - Início
+DEBUG 2021-08-05 09:10:09 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-05 09:10:09 - AuthenticationBO.Login - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-05 09:10:09 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-05 09:10:10 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:10 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:10 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:10 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:10 - IV-USER: ELWKU
+DEBUG 2021-08-05 09:10:10 - PD-UID: 
+DEBUG 2021-08-05 09:10:10 - User.Identity.IsAuthenticated: False
+DEBUG 2021-08-05 09:10:10 - User.Identity.Name: 
+DEBUG 2021-08-05 09:10:10 - !User.Identity.IsAuthenticated || User.Identity.Name != user
+DEBUG 2021-08-05 09:10:10 - user: ELWKU
+DEBUG 2021-08-05 09:10:10 - model.AppId: caa0f8bb-210e-41ac-b38b-3404cf46f185
+DEBUG 2021-08-05 09:10:10 - model.CultureName: en-us
+DEBUG 2021-08-05 09:10:10 - model.IP: ::1
+DEBUG 2021-08-05 09:10:10 - model.Login: ELWKU
+DEBUG 2021-08-05 09:10:10 - model: Bayer.Pegasus.Entities.Api.LoginSSOViewModel
+DEBUG 2021-08-05 09:10:10 - accessToken.ClientHash: NzEzZTM0NTAtMTU2My0zYWQzLWJmNzUtNmFkMTU4ZDFhZjBiOjMzMmY2ODVhLTI0OGItMzUxZS05ZDAzLTg5NDlmNDU1NzI3OA==
+DEBUG 2021-08-05 09:10:10 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:10 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:10 - token: 63035ba3-e189-3f0a-accb-fa993fc13c20
+DEBUG 2021-08-05 09:10:10 - AuthenticationBO.LoginSSO - Início
+DEBUG 2021-08-05 09:10:10 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:10:10 - LoginSSOUrl: https://qa-br-api-gateway.bayer.biz/cp/authservices/2.0/loginsso
+DEBUG 2021-08-05 09:10:10 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:10:10 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:10:10 - AuthenticationBO.LoginSSO - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:10:11 - AuthenticationBO.LoginSSO - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-05 09:10:11 - AuthenticationBO.LoginSSO - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-05 09:10:11 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:10:11 - AuthenticationBO.LoginSSO - Fim
+DEBUG 2021-08-05 09:10:11 - output: {"result":{"code":1,"description":null,"culture":null,"clientid":"713e3450-1563-3ad3-bf75-6ad158d1af0b","accesstoken":"63035ba3-e189-3f0a-accb-fa993fc13c20"},"return":{"nameUser":"José Alves","email":"jose.alves3.ext@bayer.com","isInternal":false,"systemName":"Pegasus","cwid":"ELWKU","dtLastLogin":"0001-01-01T00:00:00","roles":[{"name":"QA-CS-Pegasus_Administrador","level":{"name":"Administrador","restrictionCodes":null}}],"complementaryFields":null}}
+DEBUG 2021-08-05 09:10:11 - rolls: [
+  {
+    "name": "QA-CS-Pegasus_Administrador",
+    "level": {
+      "name": "Administrador",
+      "restrictionCodes": null
+    }
+  }
+]
+DEBUG 2021-08-05 09:10:11 - roles: System.Collections.Generic.List`1[Bayer.Pegasus.Entities.Api.RoleModel]
+DEBUG 2021-08-05 09:10:11 - var rl: Bayer.Pegasus.Entities.Api.ReturnModel
+DEBUG 2021-08-05 09:10:11 - AuthService: Role não está NULL
+DEBUG 2021-08-05 09:10:11 - _logger.LogInformation(role.Name): QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:10:11 - roleName: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:10:11 - levelName: Administrador
+DEBUG 2021-08-05 09:10:11 - claimRole: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:10:11 - claims: System.Collections.Generic.List`1[System.Security.Claims.Claim]
+DEBUG 2021-08-05 09:10:11 - HttpContext.SignInAsync CookieAuthenticationDefaults.AuthenticationScheme: Cookies
+DEBUG 2021-08-05 09:10:11 - HttpContext.SignInAsync userPrincipal: System.Security.Claims.ClaimsPrincipal
+DEBUG 2021-08-05 09:10:11 - HttpContext.SignInAsync authProperties: Microsoft.AspNetCore.Authentication.AuthenticationProperties
+DEBUG 2021-08-05 09:10:11 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:11 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:11 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:11 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:10:11 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:10:30 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:30 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:30 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:30 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:30 - IV-USER: 
+DEBUG 2021-08-05 09:10:30 - PD-UID: 
+DEBUG 2021-08-05 09:10:30 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:30 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:30 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:30 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:10:30 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:10:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:41 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:41 - IV-USER: 
+DEBUG 2021-08-05 09:10:41 - PD-UID: 
+DEBUG 2021-08-05 09:10:41 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:41 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:41 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:41 - IV-USER: 
+DEBUG 2021-08-05 09:10:41 - PD-UID: 
+DEBUG 2021-08-05 09:10:41 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:41 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:42 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:42 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:42 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:42 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:42 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:42 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:43 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:43 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:43 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:10:43 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:10:43 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:43 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:43 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:43 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:44 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:44 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:44 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:44 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:45 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:10:45 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:45 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:46 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:46 - IV-USER: 
+DEBUG 2021-08-05 09:10:46 - PD-UID: 
+DEBUG 2021-08-05 09:10:46 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:46 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:46 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:46 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:46 - IV-USER: 
+DEBUG 2021-08-05 09:10:46 - PD-UID: 
+DEBUG 2021-08-05 09:10:46 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:46 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:46 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:46 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:46 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:46 - IV-USER: 
+DEBUG 2021-08-05 09:10:46 - PD-UID: 
+DEBUG 2021-08-05 09:10:46 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:46 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:46 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:47 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:47 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:47 - IV-USER: 
+DEBUG 2021-08-05 09:10:47 - PD-UID: 
+DEBUG 2021-08-05 09:10:47 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:47 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:47 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:47 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:47 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:10:47 - IV-USER: 
+DEBUG 2021-08-05 09:10:47 - PD-UID: 
+DEBUG 2021-08-05 09:10:47 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:10:47 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:10:47 - ----------------------------------------------------
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:10:47 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:31:35 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:31:35 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:31:35 - ----------------------------------------------------
+DEBUG 2021-08-05 09:31:35 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:31:35 - IV-USER: 
+DEBUG 2021-08-05 09:31:35 - PD-UID: 
+DEBUG 2021-08-05 09:31:35 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:31:35 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:31:35 - ----------------------------------------------------
+DEBUG 2021-08-05 09:31:36 - LoggedBaseController.AuthenticationError() (Início)
+DEBUG 2021-08-05 09:31:36 - LoggedBaseController.AuthenticationError() - Redirect para a LoginURL: /PortalOne/login.html
+DEBUG 2021-08-05 09:31:36 - LoggedBaseController.AuthenticationError() (Fim)
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:32:25 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-05 09:32:25 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:32:25 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:32:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:32:27 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-05 09:32:27 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"8b5ec80d-573b-3a8b-9dbb-c2bb6be75f28","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-05 09:32:27 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:32:27 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-05 09:32:27 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-05 09:32:27 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:32:27 - AuthenticationBO.Login - Início
+DEBUG 2021-08-05 09:32:29 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 401
+ERROR 2021-08-05 09:32:29 - AuthenticationBO.Login - httpClient.PostAsync - Erro
+DEBUG 2021-08-05 09:32:29 - AuthenticationBO.Login - Fim
+ERROR 2021-08-05 09:32:55 - AuthenticationBO.Login - Exception: Object reference not set to an instance of an object. - InnerException:  - Trace:    at Bayer.Pegasus.Business.AuthenticationBO.ResultLogin(JToken jsontoken, String ClientId, String token) in C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Business\AuthenticationBO.cs:line 253
+   at Bayer.Pegasus.Business.AuthenticationBO.Login(LoginViewModel model, String token, String loginUrl, String clientId) in C:\Temp\CS-PDB-Pegasus\Aplicação\Bayer.Pegasus.Business\AuthenticationBO.cs:line 85
+DEBUG 2021-08-05 09:36:01 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:01 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:01 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:01 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:01 - IV-USER: 
+DEBUG 2021-08-05 09:36:01 - PD-UID: 
+DEBUG 2021-08-05 09:36:01 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:01 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:01 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:01 - LoggedBaseController.AuthenticationError() (Início)
+DEBUG 2021-08-05 09:36:01 - LoggedBaseController.AuthenticationError() - Redirect para a LoginURL: /PortalOne/login.html
+DEBUG 2021-08-05 09:36:01 - LoggedBaseController.AuthenticationError() (Fim)
+DEBUG 2021-08-05 09:36:21 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:21 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:21 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-05 09:36:21 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:21 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-05 09:36:22 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-05 09:36:22 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:36:22 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-05 09:36:22 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:36:22 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:36:22 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:36:23 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-05 09:36:23 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"62f2eaaf-530b-3f95-95b1-1d1ab20da9f7","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-05 09:36:23 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:36:23 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-05 09:36:23 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-05 09:36:23 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:23 - AuthenticationBO.Login - Início
+DEBUG 2021-08-05 09:36:24 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-05 09:36:24 - AuthenticationBO.Login - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-05 09:36:24 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-05 09:36:24 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:24 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:24 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:24 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:24 - IV-USER: ELWKU
+DEBUG 2021-08-05 09:36:24 - PD-UID: 
+DEBUG 2021-08-05 09:36:24 - User.Identity.IsAuthenticated: False
+DEBUG 2021-08-05 09:36:24 - User.Identity.Name: 
+DEBUG 2021-08-05 09:36:24 - !User.Identity.IsAuthenticated || User.Identity.Name != user
+DEBUG 2021-08-05 09:36:24 - user: ELWKU
+DEBUG 2021-08-05 09:36:24 - model.AppId: caa0f8bb-210e-41ac-b38b-3404cf46f185
+DEBUG 2021-08-05 09:36:24 - model.CultureName: en-us
+DEBUG 2021-08-05 09:36:24 - model.IP: ::1
+DEBUG 2021-08-05 09:36:24 - model.Login: ELWKU
+DEBUG 2021-08-05 09:36:24 - model: Bayer.Pegasus.Entities.Api.LoginSSOViewModel
+DEBUG 2021-08-05 09:36:24 - accessToken.ClientHash: NzEzZTM0NTAtMTU2My0zYWQzLWJmNzUtNmFkMTU4ZDFhZjBiOjMzMmY2ODVhLTI0OGItMzUxZS05ZDAzLTg5NDlmNDU1NzI3OA==
+DEBUG 2021-08-05 09:36:24 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:24 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:24 - token: 62f2eaaf-530b-3f95-95b1-1d1ab20da9f7
+DEBUG 2021-08-05 09:36:24 - AuthenticationBO.LoginSSO - Início
+DEBUG 2021-08-05 09:36:24 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:36:24 - LoginSSOUrl: https://qa-br-api-gateway.bayer.biz/cp/authservices/2.0/loginsso
+DEBUG 2021-08-05 09:36:24 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:36:24 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:36:24 - AuthenticationBO.LoginSSO - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:36:26 - AuthenticationBO.LoginSSO - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-05 09:36:26 - AuthenticationBO.LoginSSO - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-05 09:36:26 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:36:26 - AuthenticationBO.LoginSSO - Fim
+DEBUG 2021-08-05 09:36:26 - output: {"result":{"code":1,"description":null,"culture":null,"clientid":"713e3450-1563-3ad3-bf75-6ad158d1af0b","accesstoken":"62f2eaaf-530b-3f95-95b1-1d1ab20da9f7"},"return":{"nameUser":"José Alves","email":"jose.alves3.ext@bayer.com","isInternal":false,"systemName":"Pegasus","cwid":"ELWKU","dtLastLogin":"0001-01-01T00:00:00","roles":[{"name":"QA-CS-Pegasus_Administrador","level":{"name":"Administrador","restrictionCodes":null}}],"complementaryFields":null}}
+DEBUG 2021-08-05 09:36:26 - rolls: [
+  {
+    "name": "QA-CS-Pegasus_Administrador",
+    "level": {
+      "name": "Administrador",
+      "restrictionCodes": null
+    }
+  }
+]
+DEBUG 2021-08-05 09:36:26 - roles: System.Collections.Generic.List`1[Bayer.Pegasus.Entities.Api.RoleModel]
+DEBUG 2021-08-05 09:36:26 - var rl: Bayer.Pegasus.Entities.Api.ReturnModel
+DEBUG 2021-08-05 09:36:26 - AuthService: Role não está NULL
+DEBUG 2021-08-05 09:36:26 - _logger.LogInformation(role.Name): QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:36:26 - roleName: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:36:26 - levelName: Administrador
+DEBUG 2021-08-05 09:36:26 - claimRole: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:36:26 - claims: System.Collections.Generic.List`1[System.Security.Claims.Claim]
+DEBUG 2021-08-05 09:36:26 - HttpContext.SignInAsync CookieAuthenticationDefaults.AuthenticationScheme: Cookies
+DEBUG 2021-08-05 09:36:26 - HttpContext.SignInAsync userPrincipal: System.Security.Claims.ClaimsPrincipal
+DEBUG 2021-08-05 09:36:26 - HttpContext.SignInAsync authProperties: Microsoft.AspNetCore.Authentication.AuthenticationProperties
+DEBUG 2021-08-05 09:36:26 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:26 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:26 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:26 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:36:26 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:36:37 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:37 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:37 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:37 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:37 - IV-USER: 
+DEBUG 2021-08-05 09:36:37 - PD-UID: 
+DEBUG 2021-08-05 09:36:37 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:37 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:37 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:37 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:36:37 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:36:38 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:38 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:38 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:38 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:38 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:38 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:38 - IV-USER: 
+DEBUG 2021-08-05 09:36:38 - PD-UID: 
+DEBUG 2021-08-05 09:36:38 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:38 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:38 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:38 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:38 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:38 - IV-USER: 
+DEBUG 2021-08-05 09:36:38 - PD-UID: 
+DEBUG 2021-08-05 09:36:38 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:38 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:38 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:39 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:40 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:40 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:40 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:40 - IV-USER: 
+DEBUG 2021-08-05 09:36:40 - PD-UID: 
+DEBUG 2021-08-05 09:36:40 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:40 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:40 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:41 - IV-USER: 
+DEBUG 2021-08-05 09:36:41 - PD-UID: 
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:41 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:41 - IV-USER: 
+DEBUG 2021-08-05 09:36:41 - PD-UID: 
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:41 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:41 - IV-USER: 
+DEBUG 2021-08-05 09:36:41 - PD-UID: 
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:41 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:41 - IV-USER: 
+DEBUG 2021-08-05 09:36:41 - PD-UID: 
+DEBUG 2021-08-05 09:36:41 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:41 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:41 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:36:41 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:36:41 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:36:56 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:56 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:56 - RetroativoController - Construtor (Início)
+DEBUG 2021-08-05 09:36:56 - RetroativoController - Construtor (Fim)
+DEBUG 2021-08-05 09:36:56 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:56 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:56 - IV-USER: 
+DEBUG 2021-08-05 09:36:56 - PD-UID: 
+DEBUG 2021-08-05 09:36:56 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:56 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:56 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:56 - RetroativoController.Index (Início)
+DEBUG 2021-08-05 09:36:56 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:36:56 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:36:56 - RetroativoController.Index (Fim)
+DEBUG 2021-08-05 09:36:58 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:36:58 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:36:58 - RetroativoController - Construtor (Início)
+DEBUG 2021-08-05 09:36:58 - RetroativoController - Construtor (Fim)
+DEBUG 2021-08-05 09:36:58 - ----------------------------------------------------
+DEBUG 2021-08-05 09:36:58 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:36:58 - IV-USER: 
+DEBUG 2021-08-05 09:36:58 - PD-UID: 
+DEBUG 2021-08-05 09:36:58 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:36:58 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:36:58 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:06 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:06 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:06 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:06 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:37:06 - IV-USER: 
+DEBUG 2021-08-05 09:37:06 - PD-UID: 
+DEBUG 2021-08-05 09:37:06 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:37:06 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:37:06 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:06 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:37:06 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:37:07 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:07 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:08 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:37:08 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:08 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:08 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:08 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:37:08 - IV-USER: 
+DEBUG 2021-08-05 09:37:08 - PD-UID: 
+DEBUG 2021-08-05 09:37:08 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:37:08 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:37:08 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:26 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:26 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:26 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:26 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:37:26 - IV-USER: 
+DEBUG 2021-08-05 09:37:26 - PD-UID: 
+DEBUG 2021-08-05 09:37:26 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:37:26 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:37:26 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:26 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:37:26 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:37:27 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:27 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:27 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:37:27 - IV-USER: 
+DEBUG 2021-08-05 09:37:27 - PD-UID: 
+DEBUG 2021-08-05 09:37:27 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:37:27 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:37:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:27 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:27 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:27 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:37:27 - IV-USER: 
+DEBUG 2021-08-05 09:37:27 - PD-UID: 
+DEBUG 2021-08-05 09:37:27 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:37:27 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:37:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:27 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:27 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:28 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:28 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:37:28 - IV-USER: 
+DEBUG 2021-08-05 09:37:28 - PD-UID: 
+DEBUG 2021-08-05 09:37:28 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:37:28 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:37:28 - ----------------------------------------------------
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:28 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:37:28 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:37:28 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:54:52 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:54:52 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:54:52 - ----------------------------------------------------
+DEBUG 2021-08-05 09:54:52 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:54:52 - IV-USER: 
+DEBUG 2021-08-05 09:54:52 - PD-UID: 
+DEBUG 2021-08-05 09:54:52 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:54:52 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:54:52 - ----------------------------------------------------
+DEBUG 2021-08-05 09:54:53 - LoggedBaseController.AuthenticationError() (Início)
+DEBUG 2021-08-05 09:54:53 - LoggedBaseController.AuthenticationError() - Redirect para a LoginURL: /PortalOne/login.html
+DEBUG 2021-08-05 09:54:53 - LoggedBaseController.AuthenticationError() (Fim)
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:55:25 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-05 09:55:25 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:55:25 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:55:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:55:26 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-05 09:55:26 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"4f0be35e-b085-32d9-8338-fa2550ac3c3b","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-05 09:55:26 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:55:26 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-05 09:55:26 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-05 09:55:26 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:55:26 - AuthenticationBO.Login - Início
+DEBUG 2021-08-05 09:55:28 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 401
+ERROR 2021-08-05 09:55:28 - AuthenticationBO.Login - httpClient.PostAsync - Erro
+DEBUG 2021-08-05 09:55:28 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-05 09:57:07 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:07 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:07 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:07 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:07 - IV-USER: 
+DEBUG 2021-08-05 09:57:07 - PD-UID: 
+DEBUG 2021-08-05 09:57:07 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:07 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:07 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:07 - LoggedBaseController.AuthenticationError() (Início)
+DEBUG 2021-08-05 09:57:07 - LoggedBaseController.AuthenticationError() - Redirect para a LoginURL: /PortalOne/login.html
+DEBUG 2021-08-05 09:57:07 - LoggedBaseController.AuthenticationError() (Fim)
+DEBUG 2021-08-05 09:57:22 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:22 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:22 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-05 09:57:22 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:22 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-05 09:57:23 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-05 09:57:23 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:57:23 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-05 09:57:23 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:57:23 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:57:23 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:57:24 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-05 09:57:24 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"ce1b4ec1-edfb-3843-baa9-d9b7727c2b18","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-05 09:57:24 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:57:24 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-05 09:57:24 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-05 09:57:24 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:24 - AuthenticationBO.Login - Início
+DEBUG 2021-08-05 09:57:25 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-05 09:57:25 - AuthenticationBO.Login - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-05 09:57:25 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-05 09:57:25 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:25 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:25 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:25 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:25 - IV-USER: elwku
+DEBUG 2021-08-05 09:57:25 - PD-UID: 
+DEBUG 2021-08-05 09:57:25 - User.Identity.IsAuthenticated: False
+DEBUG 2021-08-05 09:57:25 - User.Identity.Name: 
+DEBUG 2021-08-05 09:57:25 - !User.Identity.IsAuthenticated || User.Identity.Name != user
+DEBUG 2021-08-05 09:57:25 - user: elwku
+DEBUG 2021-08-05 09:57:25 - model.AppId: caa0f8bb-210e-41ac-b38b-3404cf46f185
+DEBUG 2021-08-05 09:57:25 - model.CultureName: en-us
+DEBUG 2021-08-05 09:57:25 - model.IP: ::1
+DEBUG 2021-08-05 09:57:25 - model.Login: elwku
+DEBUG 2021-08-05 09:57:25 - model: Bayer.Pegasus.Entities.Api.LoginSSOViewModel
+DEBUG 2021-08-05 09:57:25 - accessToken.ClientHash: NzEzZTM0NTAtMTU2My0zYWQzLWJmNzUtNmFkMTU4ZDFhZjBiOjMzMmY2ODVhLTI0OGItMzUxZS05ZDAzLTg5NDlmNDU1NzI3OA==
+DEBUG 2021-08-05 09:57:25 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:25 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:25 - token: ce1b4ec1-edfb-3843-baa9-d9b7727c2b18
+DEBUG 2021-08-05 09:57:25 - AuthenticationBO.LoginSSO - Início
+DEBUG 2021-08-05 09:57:25 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Início)
+DEBUG 2021-08-05 09:57:25 - LoginSSOUrl: https://qa-br-api-gateway.bayer.biz/cp/authservices/2.0/loginsso
+DEBUG 2021-08-05 09:57:25 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-05 09:57:25 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-05 09:57:25 - AuthenticationBO.LoginSSO - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-05 09:57:27 - AuthenticationBO.LoginSSO - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-05 09:57:27 - AuthenticationBO.LoginSSO - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-05 09:57:27 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Fim)
+DEBUG 2021-08-05 09:57:27 - AuthenticationBO.LoginSSO - Fim
+DEBUG 2021-08-05 09:57:27 - output: {"result":{"code":1,"description":null,"culture":null,"clientid":"713e3450-1563-3ad3-bf75-6ad158d1af0b","accesstoken":"ce1b4ec1-edfb-3843-baa9-d9b7727c2b18"},"return":{"nameUser":"José Alves","email":"jose.alves3.ext@bayer.com","isInternal":false,"systemName":"Pegasus","cwid":"ELWKU","dtLastLogin":"0001-01-01T00:00:00","roles":[{"name":"QA-CS-Pegasus_Administrador","level":{"name":"Administrador","restrictionCodes":null}}],"complementaryFields":null}}
+DEBUG 2021-08-05 09:57:27 - rolls: [
+  {
+    "name": "QA-CS-Pegasus_Administrador",
+    "level": {
+      "name": "Administrador",
+      "restrictionCodes": null
+    }
+  }
+]
+DEBUG 2021-08-05 09:57:27 - roles: System.Collections.Generic.List`1[Bayer.Pegasus.Entities.Api.RoleModel]
+DEBUG 2021-08-05 09:57:27 - var rl: Bayer.Pegasus.Entities.Api.ReturnModel
+DEBUG 2021-08-05 09:57:27 - AuthService: Role não está NULL
+DEBUG 2021-08-05 09:57:27 - _logger.LogInformation(role.Name): QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:57:27 - roleName: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:57:27 - levelName: Administrador
+DEBUG 2021-08-05 09:57:27 - claimRole: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-05 09:57:27 - claims: System.Collections.Generic.List`1[System.Security.Claims.Claim]
+DEBUG 2021-08-05 09:57:27 - HttpContext.SignInAsync CookieAuthenticationDefaults.AuthenticationScheme: Cookies
+DEBUG 2021-08-05 09:57:27 - HttpContext.SignInAsync userPrincipal: System.Security.Claims.ClaimsPrincipal
+DEBUG 2021-08-05 09:57:27 - HttpContext.SignInAsync authProperties: Microsoft.AspNetCore.Authentication.AuthenticationProperties
+DEBUG 2021-08-05 09:57:27 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:27 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:27 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:27 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:57:27 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:57:43 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:43 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:43 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:43 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:43 - IV-USER: 
+DEBUG 2021-08-05 09:57:43 - PD-UID: 
+DEBUG 2021-08-05 09:57:43 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:43 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:43 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:43 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:57:43 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:57:44 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:44 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:44 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:44 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:44 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:44 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:44 - IV-USER: 
+DEBUG 2021-08-05 09:57:44 - PD-UID: 
+DEBUG 2021-08-05 09:57:44 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:44 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:44 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:44 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:44 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:44 - IV-USER: 
+DEBUG 2021-08-05 09:57:44 - PD-UID: 
+DEBUG 2021-08-05 09:57:44 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:44 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:44 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:45 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:45 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:45 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:45 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:45 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:45 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:46 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:57:46 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:46 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:47 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:57:47 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - BrandController - Construtor (Início)
+DEBUG 2021-08-05 09:57:48 - BrandController - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:48 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:49 - IV-USER: 
+DEBUG 2021-08-05 09:57:49 - PD-UID: 
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:49 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:49 - IV-USER: 
+DEBUG 2021-08-05 09:57:49 - PD-UID: 
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:49 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:49 - IV-USER: 
+DEBUG 2021-08-05 09:57:49 - PD-UID: 
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:49 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:49 - IV-USER: 
+DEBUG 2021-08-05 09:57:49 - PD-UID: 
+DEBUG 2021-08-05 09:57:49 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:49 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:49 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:49 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:50 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:50 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:50 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:50 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:50 - IV-USER: 
+DEBUG 2021-08-05 09:57:50 - PD-UID: 
+DEBUG 2021-08-05 09:57:50 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:50 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:50 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:50 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-05 09:57:50 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-05 09:57:53 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:53 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:53 - RetroativoController - Construtor (Início)
+DEBUG 2021-08-05 09:57:53 - RetroativoController - Construtor (Fim)
+DEBUG 2021-08-05 09:57:53 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:53 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:53 - IV-USER: 
+DEBUG 2021-08-05 09:57:53 - PD-UID: 
+DEBUG 2021-08-05 09:57:53 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:53 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:53 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:53 - RetroativoController.Index (Início)
+DEBUG 2021-08-05 09:57:53 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-05 09:57:53 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-05 09:57:53 - RetroativoController.Index (Fim)
+DEBUG 2021-08-05 09:57:56 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-05 09:57:56 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-05 09:57:56 - RetroativoController - Construtor (Início)
+DEBUG 2021-08-05 09:57:56 - RetroativoController - Construtor (Fim)
+DEBUG 2021-08-05 09:57:56 - ----------------------------------------------------
+DEBUG 2021-08-05 09:57:56 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-05 09:57:56 - IV-USER: 
+DEBUG 2021-08-05 09:57:56 - PD-UID: 
+DEBUG 2021-08-05 09:57:56 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-05 09:57:56 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-05 09:57:56 - ----------------------------------------------------

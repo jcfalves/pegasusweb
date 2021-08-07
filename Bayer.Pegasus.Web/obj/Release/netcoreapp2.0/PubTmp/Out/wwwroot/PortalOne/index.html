@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/portal-one.css" />
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/portal-one.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <div id="user-info">
+            <div id="area"></div>
+            <div id="user">
+                <span class="icon"></span>
+                <div class="name">Olá, <span class="name" id="username"></span><span class="seta"></span></div>
+            </div>
+        </div>
+        <div id="logos">
+            <a class="navbar-brand" href="/PortalOne/index.html">
+                <img src="/images/agroservices.png">
+            </a>
+            <a class="bayer-logo" href="http://www.bayer.com.br/" target="_blank">
+                <img src="images/logo-bayer.png">
+            </a>
+        </div>
+        <div id="mobile-button" class="box-shadow-menu">
+        </div>
+        <div id="navigation">
+            <div id="nav-wrapper">
+
+                <div class="nav-item" data-item="#Dashboard">
+                    <span> <a class="link" href="#Dashboard">Dashboard</a></span>
+
+                </div>
+
+                <div class="nav-item has-second-level">
+                    <span><a>Administração</a></span>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false">
+                        <li>
+                            <a href="#CFOPRegistration">Cadastro de CFOP</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#retroativo">Arquivo retroativo</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="nav-item has-second-level">
+                    <span><a>Clientes</a></span>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false">
+                        <li>
+                            <a href="#ClientsReport">Mapa de Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#TopClients">Top Clientes</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="nav-item has-second-level">
+                    <span>Estoque</span>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false">
+                        <li>
+                            <a href="#StockReport">Relatório de Fechamento</a>
+                        </li>
+                        <li>
+                            <a href="#StockEvolution">Evolução</a>
+                        </li>
+                        <li>
+                            <a href="#TopStockProducts">Top Produtos em Estoque</a>
+                        </li>
+                        <li>
+                            <a href="#StockTransit">Estoque em Trânsito</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-item has-second-level">
+                    <span>Monitoramento</span>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false">
+                        <li>
+                            <a href="#Monitor">Interfaces</a>
+                        </li>
+                        <li>
+                            <a href="#HealthCheck">Health Check</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-item has-second-level">
+                    <span>Sell Out</span>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false">
+                        <li>
+                            <a href="#SelloutEvolution">Evolução</a>
+                        </li>
+                        <li>
+                            <a href="#PegasusReport">Relatório de Movimento Pegasus</a>
+                        </li>
+                        <li>
+                            <a href="#Sellout">Relatório Gráfico</a>
+                        </li>
+                        <li>
+                            <a href="#Accera">Relatório de Cargas Accera</a>
+                        </li>
+                        <li>
+                            <a href="#TopProducts">Top Produtos</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="nav-item" data-item="#SelloutStock">
+                    <span><a class="link" href="#SelloutStock">Sell Out x Estoque</a></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="framewrapper">
+        <iframe id="content-pegasus" src="" scrolling="yes"></iframe>
+    </div>
+</body>
+</html>

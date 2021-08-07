@@ -1,0 +1,26 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+
+@{ Html.RenderPartial("Filter"); }
+
+@{ Html.RenderPartial("../Shared/Historic.cshtml"); }
+
+@{ Html.RenderPartial("ChartResults"); }
+
+@section scripts {
+
+    <script src="~/js/ViewModels/SelloutViewModel.js"></script>
+
+    <script>
+        var viewModel = new SelloutViewModel();
+
+        $(document).ready(function () {
+
+            ko.applyBindings(viewModel);
+
+            viewModel.HistoryViewModel.LoadData();
+        });
+
+    </script>
+
+}

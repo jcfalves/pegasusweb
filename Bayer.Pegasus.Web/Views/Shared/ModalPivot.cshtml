@@ -1,0 +1,119 @@
+﻿<div class="modal fade" id="ModalPivot" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab">Escolha os campos abaixo para adicionar no relatório:</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+                                <div class="row">
+                                    <div id="DragDropFields" class="col-lg-12 canDrop" data-bind="dropZone: { accepts: 'filters', drop: PivotModal.drop }">
+                                        <!-- ko foreach: PivotModal.Fields -->
+                                        <div class="pivot-field" data-bind="dragZone: {longTapDelay: 50, name: 'filters', dragStart: $root.PivotModal.dragStart, dragEnd: $root.PivotModal.dragEnd}">
+                                            <input type="checkbox" data-bind="attr: {id: 'chkCampo_' + $data.value}, value: $data, checked: $root.PivotModal.SelectedIds, checkedValue: $data.value" />
+                                            <label data-bind="attr: {for: 'chkCampo_' + $data.value}"></label>
+                                            <span data-bind="text: $data.name"></span>
+                                        </div>
+                                        <!-- /ko -->
+                                    </div>
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                        <div>
+                            <h2 class="title-tab">Arraste os campos entre as telas abaixo:</h2>
+                            <div class="wrap-row">
+                                <!--Campos Criterios-->
+                                <div class="wrapperTelas col-sm-6 col-xs-12">
+                                    <h3>Critérios</h3>
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-12" id="PivotCriterios">
+                                                    <ul id="DragDropCriteria" class="canDrop" data-bind="foreach: PivotModal.Criteria, dropZone: { accepts: 'filters', drop: PivotModal.drop }">
+                                                        <li data-bind="dragZone: {longTapDelay: 50, name: 'filters', dragStart: $parent.PivotModal.dragStart, dragEnd: $parent.PivotModal.dragEnd}">
+                                                            <span data-bind="text: $data.name"></span>
+                                                            <span class="remover" data-bind="click: $parent.PivotModal.removeField">x</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Campos Colunas-->
+                                <div class="wrapperTelas col-sm-6 col-xs-12">
+                                    <h3>Colunas</h3>
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-12" id="PivotColunas">
+                                                    <ul id="DragDropColumns" class="canDrop" data-bind="foreach: PivotModal.Columns, dropZone: { accepts: 'filters', drop: PivotModal.drop }">
+                                                        <li data-bind="dragZone: {longTapDelay: 50, name: 'filters', dragStart: $parent.PivotModal.dragStart, dragEnd: $parent.PivotModal.dragEnd }">
+                                                            <span data-bind="text: $data.name"></span>
+                                                            <span class="remover" data-bind="click: $parent.PivotModal.removeField">x</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrap-row">
+                                <!--Campos Linhas-->
+                                <div class="wrapperTelas col-sm-6 col-xs-12">
+                                    <h3>Linhas</h3>
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-12" id="PivotLinhas">
+                                                    <ul id="DragDropRows" class="canDrop" data-bind="foreach: PivotModal.Rows, dropZone: { accepts: 'filters', drop: PivotModal.drop }">
+                                                        <li data-bind="dragZone: {longTapDelay: 50, name: 'filters', dragStart: $parent.PivotModal.dragStart, dragEnd: $parent.PivotModal.dragEnd }">
+                                                            <span data-bind="text: $data.name"></span>
+                                                            <span class="remover" data-bind="click: $parent.PivotModal.removeField">x</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Campos Metricas-->
+                                <div class="wrapperTelas col-sm-6 col-xs-12">
+                                    <h3>Métricas</h3>
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-12" id="PivotMetricas">
+                                                    <ul id="DragDropMetrics" class="canDrop" data-bind="foreach: PivotModal.Metrics, dropZone: { accepts: 'filters', drop: PivotModal.drop }">
+                                                        <li data-bind="dragZone: {longTapDelay: 50, name: 'filters', dragStart: $parent.PivotModal.dragStart, dragEnd: $parent.PivotModal.dragEnd }">
+                                                            <span data-bind="text: $data.name"></span>
+                                                            <span class="remover" data-bind="click: $parent.PivotModal.removeField">x</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-buttons" id="buttonsPivot" runat="server" visible="false">
+                            <button type="button" data-dismiss="modal" class="btn btnSecundario"><i class="fa fa-angle-left" aria-hidden="true"></i><span>Voltar</span></button>
+                            <button type="button" data-bind="click: PivotModal.NextStep" class="btn btnPrincipal btnNext"><i class="fa fa-angle-right" aria-hidden="true"></i><span>Continuar</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

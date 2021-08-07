@@ -1,0 +1,142 @@
+﻿{
+  "selloutEvolution": [
+    {
+      "data": [
+        [ 1, 20 ],
+        [ 2, 40 ],
+        [ 3, 35 ],
+        [ 4, 75 ],
+        [ 5, 10 ],
+        [ 6, 18 ],
+        [ 7, 63 ],
+        [ 8, 57 ],
+        [ 9, 90 ],
+        [ 10, 71 ],
+        [ 11, 88 ],
+        [ 12, 52 ]
+      ],
+      "color": "#0091DE"
+    }
+  ],
+  "sellout": [
+    {
+      "code": "Mirena",
+      "description": "Mirena",
+      "value": "9.000",
+      "pct": "20%"
+    },
+    {
+      "code": "Coppertone",
+      "description": "Coppertone",
+      "value": "1.000",
+      "pct": "30%"
+    },
+    {
+      "code": "Yaz",
+      "description": "Yaz",
+      "value": "1.000",
+      "pct": "5%"
+    },
+    {
+      "code": "Adalat",
+      "description": "Adalat",
+      "value": "3.000",
+      "pct": "5%"
+    }
+  ],
+  "stockEvolution": [
+    {
+      "label": "Produto 1",
+      "data": [
+        [ 1, 40 ],
+        [ 2, 80 ],
+        [ 3, 70 ],
+        [ 4, 150 ],
+        [ 5, 20 ],
+        [ 6, 36 ],
+        [ 7, 63 ],
+        [ 8, 57 ],
+        [ 9, 90 ],
+        [ 10, 71 ],
+        [ 11, 88 ],
+        [ 12, 52 ]
+      ],
+      "color": "#104E3F"
+    },
+    {
+      "label": "Produto 2",
+      "data": [
+        [ 1, 5 ],
+        [ 2, 80 ],
+        [ 3, 20 ],
+        [ 4, 75 ],
+        [ 5, 50 ],
+        [ 6, 10 ],
+        [ 7, 15 ],
+        [ 8, 35 ],
+        [ 9, 25 ],
+        [ 10, 15 ],
+        [ 11, 20 ],
+        [ 12, 30 ]
+      ],
+      "color": "#8AD429"
+    }
+  ],
+  "topStockProducts": [
+    {
+      "code": "Mirena",
+      "description": "Mirena",
+      "value": "5.000",
+      "pct": "10%"
+    },
+    {
+      "code": "Coppertone",
+      "description": "Coppertone",
+      "value": "2.000",
+      "pct": "5%"
+    },
+    {
+      "code": "Yaz",
+      "description": "Yaz",
+      "value": "3.000",
+      "pct": "1%"
+    },
+    {
+      "code": "Adalat",
+      "description": "Adalat",
+      "value": "3.000",
+      "pct": "1%"
+    }
+  ],
+  "selloutStock": {
+    "stock": [
+      [ 1, 20 ],
+      [ 2, 40 ],
+      [ 3, 35 ],
+      [ 4, 75 ],
+      [ 5, 10 ],
+      [ 6, 18 ],
+      [ 7, 63 ],
+      [ 8, 57 ],
+      [ 9, 90 ],
+      [ 10, 71 ],
+      [ 11, 88 ],
+      [ 12, 52 ]
+    ],
+    "sellout": [
+      [ 1, 30 ],
+      [ 2, 25 ],
+      [ 3, 60 ],
+      [ 4, 55 ],
+      [ 5, 50 ],
+      [ 6, 25 ],
+      [ 7, 80 ],
+      [ 8, 75 ],
+      [ 9, 50 ],
+      [ 10, 80 ],
+      [ 11, 102 ],
+      [ 12, 80 ]
+    ]
+  }
+
+}

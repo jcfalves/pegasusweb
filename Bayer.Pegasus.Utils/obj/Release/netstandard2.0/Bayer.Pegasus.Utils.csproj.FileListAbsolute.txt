@@ -1,0 +1,14 @@
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\bin\Release\netstandard2.0\Bayer.Pegasus.Utils.deps.json
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\bin\Release\netstandard2.0\Bayer.Pegasus.Utils.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\bin\Release\netstandard2.0\Bayer.Pegasus.Utils.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\bin\Release\netstandard2.0\Bayer.Pegasus.Entities.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\bin\Release\netstandard2.0\Bayer.Pegasus.Entities.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.csprojAssemblyReference.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.Resources.Validation.resources
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.csproj.GenerateResource.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.csproj.CoreCompileInputs.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.AssemblyInfoInputs.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.AssemblyInfo.cs
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.csproj.CopyComplete
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Utils\obj\Release\netstandard2.0\Bayer.Pegasus.Utils.pdb

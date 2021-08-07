@@ -1,0 +1,28 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+
+@{ Html.RenderPartial("Filter", Model); }
+
+@{ Html.RenderPartial("../Shared/Historic.cshtml"); }
+
+@{ Html.RenderPartial("ChartResults"); }
+
+@section scripts {
+
+    <script src="~/js/ViewModels/Shared/CFOPViewModel.js"></script>
+    <script src="~/js/ViewModels/SelloutStockViewModel.js"></script>
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            var viewModel = new SelloutStockViewModel();
+            ko.applyBindings(viewModel);
+
+            viewModel.HistoryViewModel.LoadData();
+        });
+
+    </script>
+
+}

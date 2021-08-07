@@ -1,0 +1,410 @@
+﻿@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/HelveticaNeueLTStd-Lt.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('/fonts/HelveticaNeueLTStd-Bd.otf');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+div#menu {
+    float: left;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+}
+
+#loginBody div#menu {
+    position: relative;
+}
+
+div#user-info {
+    height: 33px;
+    width: 100%;
+    background-color: #EBEBEB;
+}
+
+#user-info div#area {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #67B513;
+    text-align: center;
+    line-height: 36px;
+    font-family: Helvetica Neue;
+    color: #fff;
+    font-weight: bold;
+}
+
+#user-info div#user {
+    float: right;
+    height: 23px;
+    margin-top: 5px;
+    padding: 0 30px 0 15px;
+    line-height: 23px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: #242D3E;
+    border-left: 2px solid #D2D2D2;
+}
+
+    #user-info div#user span.icon {
+        width: 18px;
+        height: 18px;
+        background: lightblue;
+        float: left;
+        margin-top: 2px;
+        border-radius: 15px;
+        margin-right: 15px;
+    }
+
+    #user-info div#user div.name {
+        float: left;
+    }
+
+    #user-info div#user span.seta:before {
+        content: "";
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        height: 10px;
+        width: 10px;
+        margin: 2px 0 0px 15px;
+        transform: rotate(45deg);
+        display: block;
+        float: left;
+        cursor: pointer;
+    }
+
+    #user-info div#user span.seta {
+        float: right;
+    }
+
+#menu div#logos {
+    width: 100%;
+    height: 91px;
+    float: left;
+}
+
+    #menu div#logos a img {
+        height: 75%;
+        max-height: 75px;
+        margin: 10px 40px;
+    }
+
+    #menu div#logos a.bayer-logo {
+        float: right;
+    }
+
+        #menu div#logos a.bayer-logo img {
+            height: 75px;
+            width: 75px;
+        }
+
+#menu div#navigation {
+    float: left;
+    width: 100%;
+    background-color: #67B513;
+    font-size: 0;
+    text-align: center;
+}
+
+    #menu div#navigation #nav-wrapper {
+        display: inline-block;
+    }
+
+
+    #menu div#navigation .nav-item {
+        color: #fff;
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 8px 45px 2px;
+        border-left: 1px solid #fff;
+    }
+
+        #menu div#navigation .nav-item:last-child {
+            border-right: 1px solid #fff;
+        }
+
+        #menu div#navigation .nav-item a, menu div#navigation .nav-item a:visited, menu div#navigation .nav-item a:active {
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #menu div#navigation .nav-item span {
+            width: 100%;
+            float: left;
+            line-height: 24px;
+            font-family: 'Helvetica Neue';
+        }
+
+        #menu div#navigation .nav-item:hover {
+            background-color: #01652F;
+        }
+
+        #menu div#navigation .nav-item.has-second-level {
+            position: relative;
+        }
+
+        #menu div#navigation .nav-item > ul {
+            position: absolute;
+            width: 200%;
+            left: 0;
+            top: 34px;
+            margin-top: 0;
+            padding-left: 0;
+            text-align: center;
+            display: none;
+        }
+
+        #menu div#navigation .nav-item.has-second-level:hover > ul {
+            display: block
+        }
+
+        #menu div#navigation .nav-item > ul li {
+            padding: 10px 0;
+            background-color: #01652F;
+            list-style: none;
+            margin: 0;
+            float: left;
+            width: 100%;
+        }
+
+            #menu div#navigation .nav-item > ul li:hover {
+                background-color: #00B601;
+            }
+
+            #menu div#navigation .nav-item > ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-family: Helvetica Neue;
+            }
+
+            #menu div#navigation .nav-item > ul li > ul {
+                padding: 10px 0;
+                width: 100%;
+                display: none;
+            }
+
+            #menu div#navigation .nav-item > ul li:hover > ul {
+                display: block;
+            }
+
+            #menu div#navigation .nav-item > ul li:hover > a {
+                font-family: 'Helvetica Neue Bold';
+            }
+
+            #menu div#navigation .nav-item > ul li > ul li {
+                padding: 10px 0;
+                width: 100%;
+                float: left;
+                background-color: #00617F;
+            }
+
+#framewrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 1;
+}
+
+    #framewrapper iframe {
+        width: 100%;
+        height: calc(100% - 5px);
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border: 0;
+    }
+
+/* Login */
+
+div#login-area {
+    background-image: url(../images/bg-deslogado.jpg);
+    background-position: center top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    min-height: 490px;
+    float: left;
+    width: 100%;
+}
+
+    div#login-area .content-login {
+        position: absolute;
+        width: 300px;
+        margin: 50px 5px 0px 0px;
+        left: 60%;
+    }
+
+        div#login-area .content-login h3 {
+            font-family: "Helvetica Neue";
+            font-size: 40px;
+            color: #8bd13a;
+            margin: 30px;
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+            div#login-area .content-login h3 strong {
+                display: block;
+                text-indent: -20px;
+                font-size: 50px;
+                font-family: 'Helvetica Neue Bold'
+            }
+
+        div#login-area .content-login input {
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            margin: 10px 20px;
+            width: 220px;
+            height: 25px;
+            outline: none;
+        }
+
+            div#login-area .content-login input#enviar-login {
+                background: #8bd13a;
+                color: #fff;
+                padding: 0 10px;
+                width: 147px;
+                height: 40px;
+                line-height: 46px;
+                display: block;
+                margin: 10px;
+                font-family: "Helvetica Neue Bold";
+                font-size: 20px;
+                float: right;
+            }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    #menu div#navigation .nav-item {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    #menu div#navigation .nav-item {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .box-shadow-menu {
+        position: relative;
+        border: 1px solid;
+        float: left;
+        width: 50px;
+        height: 33px;
+        border-radius: 4px;
+        margin: 20px 15px;
+    }
+
+        .box-shadow-menu:before {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            width: 25px;
+            height: 0.15em;
+            background: black;
+            box-shadow: 0 14px 0 0 black, 0 7px 0 0 black;
+        }
+
+    #user-info div#area {
+        width: 100%;
+    }
+
+    #user-info div#user {
+        width: 100%;
+        text-align: center;
+    }
+
+        #user-info div#user div.name {
+            float: none;
+        }
+
+        #user-info div#user span.seta {
+            float: none;
+            position: absolute;
+        }
+
+    #menu div#logos a img {
+        margin: 10px 15px;
+    }
+
+    #menu div#logos {
+        float: left;
+        width: 100%;
+    }
+
+    #menu div#navigation {
+        display: none;
+    }
+
+        #menu div#navigation .nav-item {
+            width: 100%;
+            height: auto;
+            padding: 10px 0;
+        }
+
+            #menu div#navigation .nav-item img {
+                height: 25px;
+            }
+
+            #menu div#navigation .nav-item span {
+                width: 50%;
+                float: none;
+                position: relative;
+                top: -5px;
+                left: 10px;
+            }
+
+            #menu div#navigation .nav-item > ul {
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+
+                #menu div#navigation .nav-item > ul li > ul li {
+                    width: 100%;
+                    height: auto;
+                }
+
+                #menu div#navigation .nav-item > ul li:hover > ul {
+                    width: 100%;
+                }
+
+    /* Login */
+
+    div#login-area {
+        background-position: right;
+        margin-top: 25px;
+        width: 90%;
+        padding: 0 5%;
+    }
+
+        div#login-area .content-login {
+            width: 100%;
+            float: left;
+            position: initial;
+        }
+
+            div#login-area .content-login input {
+                width: 90%;
+                padding: 10px 5%;
+            }
+}

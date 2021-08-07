@@ -1,0 +1,60 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+<div class="wrap-row">
+    @if (Model.SalesStructureAccess.CanAccessMultiplePartners)
+    {
+        <div class="col-md-4 col-sm-6">
+            <label>Parceiro</label>
+            <div class="form-group fa fa-handshake-o" aria-hidden="true">
+                <input class="form-control tokenFieldInput" id="SelloutStock_Partners" data-bind="tokenField: Partners, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIPartner'" placeholder="" />
+                <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+            </div>
+        </div>
+    }
+    <div class="col-md-4 col-sm-6">
+        <label>Unidades (Lojas)</label>
+        <div class="form-group fa fa-shopping-cart" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="SelloutStock_Units" data-bind="tokenField: Units, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIUnit', Parent: 'partner', ParentValue: Partners()" />
+            <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-3" id="ano-comparativo">
+        <div class="form-group">
+            <label>Ano Comparativo</label>
+            <div class="form-group fa fa-calendar" aria-hidden="true">
+                <input class="form-control" placeholder="" id="Year" data-bind="value: Year,datePicker: Year, datePickerFormat: 'YYYY', datePickerViewMode: 'years'" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" id="selecionar-meses">
+        <input id="r_ultimos_meses" type="checkbox" data-bind="checked: Last12Months" name="ultimos-meses" />
+        <label class="label-intervalo" for="r_ultimos_meses"></label>
+        Selecionar os últimos 12 meses
+    </div>
+</div>
+<div class="wrap-row">
+    <div class="col-md-4 col-sm-6">
+        <label>Marca</label>
+        <div class="form-group fa fa-registered" aria-hidden="true">
+            <input class="form-control tokenFieldInput" placeholder="" id="SelloutStock_Brands" data-bind="tokenField: Brands, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIBrand'" />
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <label>Produto</label>
+        <div class="form-group fa fa-tag" aria-hidden="true">
+            <input class="form-control" placeholder="" id="SelloutStock_Products" data-bind="tokenField: Products, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIProduct', Parent: 'brand', ParentValue: Brands()" />
+        </div>
+    </div>
+</div>
+<div id="salvar-analise" class="floatLeft col-md-8 alignHeightSave">
+    <div class="form-group">
+        <input id="r_salvar" type="checkbox" data-bind="checked: ShouldSave" name="salvar-analise" />
+        <label class="label-intervalo" for="r_salvar"></label>
+        Salvar Análise
+    </div>
+</div>
+
+<div class="form-buttons floatRight col-md-4" id="buttonsRelatorio" runat="server" visible="false">
+    <button type="button" data-bind="click: GenerateChart" class="btn btn-cyan"><i class="fa fa-bar-chart" aria-hidden="true"></i><span>Gráfico</span></button>
+</div>

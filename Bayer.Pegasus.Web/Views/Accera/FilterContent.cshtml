@@ -1,0 +1,22 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+@if (Model.SalesStructureAccess.CanAccessMultiplePartners)
+{
+    <div class="col-md-6 col-xs-12">
+        <label>Parceiro</label>
+        <div class="form-group fa fa-handshake-o" aria-hidden="true">
+            <input class="form-control tokenFieldInput" id="Accera_Partners" data-bind="tokenField: Partners, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIPartner'" placeholder="" />
+            <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+        </div>
+    </div>
+    <div id="salvar-analise" class="floatLeft col-md-8 alignHeightSave">
+        <div class="form-group">
+            <input id="r_salvar" type="checkbox" data-bind="checked: ShouldSave" name="salvar-analise" />
+            <label class="label-intervalo" for="r_salvar"></label>
+            Salvar Análise
+        </div>
+    </div>
+}
+
+<div class="form-buttons floatRight col-md-4" id="buttonsBuscar" runat="server" visible="false">
+    <button type="button" data-bind="click: Execute" class="btn btn-dark-green"><i class="fa fa-search" aria-hidden="true"></i><span>Buscar</span></button>
+</div>

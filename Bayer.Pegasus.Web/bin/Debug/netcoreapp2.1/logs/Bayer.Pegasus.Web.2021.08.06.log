@@ -1,0 +1,245 @@
+DEBUG 2021-08-06 20:59:06 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:06 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:06 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:06 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-06 20:59:06 - IV-USER: 
+DEBUG 2021-08-06 20:59:06 - PD-UID: 
+DEBUG 2021-08-06 20:59:06 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-06 20:59:06 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-06 20:59:06 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:06 - LoggedBaseController.AuthenticationError() (Início)
+DEBUG 2021-08-06 20:59:06 - LoggedBaseController.AuthenticationError() - Redirect para a LoginURL: /PortalOne/login.html
+DEBUG 2021-08-06 20:59:06 - LoggedBaseController.AuthenticationError() (Fim)
+DEBUG 2021-08-06 20:59:23 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:23 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:24 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-06 20:59:24 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:24 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-06 20:59:24 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-06 20:59:24 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-06 20:59:24 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-06 20:59:24 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-06 20:59:24 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-06 20:59:24 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-06 20:59:25 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-06 20:59:25 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-06 20:59:25 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"bfa6ebda-b682-3936-920a-e8c34094a23e","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-06 20:59:25 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:25 - AuthenticationBO.Login - Início
+DEBUG 2021-08-06 20:59:26 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-06 20:59:26 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"df3bcd51-bf5a-3d74-804f-a642dfd1c948","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-06 20:59:26 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-06 20:59:26 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-06 20:59:26 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-06 20:59:26 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:26 - AuthenticationBO.Login - Início
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.Login - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-06 20:59:27 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:27 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:27 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:27 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-06 20:59:27 - IV-USER: elwku
+DEBUG 2021-08-06 20:59:27 - PD-UID: 
+DEBUG 2021-08-06 20:59:27 - User.Identity.IsAuthenticated: False
+DEBUG 2021-08-06 20:59:27 - User.Identity.Name: 
+DEBUG 2021-08-06 20:59:27 - !User.Identity.IsAuthenticated || User.Identity.Name != user
+DEBUG 2021-08-06 20:59:27 - user: elwku
+DEBUG 2021-08-06 20:59:27 - model.AppId: caa0f8bb-210e-41ac-b38b-3404cf46f185
+DEBUG 2021-08-06 20:59:27 - model.CultureName: en-us
+DEBUG 2021-08-06 20:59:27 - model.IP: ::1
+DEBUG 2021-08-06 20:59:27 - model.Login: elwku
+DEBUG 2021-08-06 20:59:27 - model: Bayer.Pegasus.Entities.Api.LoginSSOViewModel
+DEBUG 2021-08-06 20:59:27 - accessToken.ClientHash: NzEzZTM0NTAtMTU2My0zYWQzLWJmNzUtNmFkMTU4ZDFhZjBiOjMzMmY2ODVhLTI0OGItMzUxZS05ZDAzLTg5NDlmNDU1NzI3OA==
+DEBUG 2021-08-06 20:59:27 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:27 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:27 - token: df3bcd51-bf5a-3d74-804f-a642dfd1c948
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.LoginSSO - Início
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Início)
+DEBUG 2021-08-06 20:59:27 - LoginSSOUrl: https://qa-br-api-gateway.bayer.biz/cp/authservices/2.0/loginsso
+DEBUG 2021-08-06 20:59:27 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-06 20:59:27 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.LoginSSO - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.Login - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-06 20:59:27 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-06 20:59:28 - AuthenticationBO.LoginSSO - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-06 20:59:28 - AuthenticationBO.LoginSSO - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-06 20:59:28 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Fim)
+DEBUG 2021-08-06 20:59:28 - AuthenticationBO.LoginSSO - Fim
+DEBUG 2021-08-06 20:59:28 - output: {"result":{"code":1,"description":null,"culture":null,"clientid":"713e3450-1563-3ad3-bf75-6ad158d1af0b","accesstoken":"df3bcd51-bf5a-3d74-804f-a642dfd1c948"},"return":{"nameUser":"José Alves","email":"jose.alves3.ext@bayer.com","isInternal":false,"systemName":"Pegasus","cwid":"ELWKU","dtLastLogin":"0001-01-01T00:00:00","roles":[{"name":"QA-CS-Pegasus_Administrador","level":{"name":"Administrador","restrictionCodes":null}}],"complementaryFields":null}}
+DEBUG 2021-08-06 20:59:28 - rolls: [
+  {
+    "name": "QA-CS-Pegasus_Administrador",
+    "level": {
+      "name": "Administrador",
+      "restrictionCodes": null
+    }
+  }
+]
+DEBUG 2021-08-06 20:59:28 - roles: System.Collections.Generic.List`1[Bayer.Pegasus.Entities.Api.RoleModel]
+DEBUG 2021-08-06 20:59:28 - var rl: Bayer.Pegasus.Entities.Api.ReturnModel
+DEBUG 2021-08-06 20:59:28 - AuthService: Role não está NULL
+DEBUG 2021-08-06 20:59:28 - _logger.LogInformation(role.Name): QA-CS-Pegasus_Administrador
+DEBUG 2021-08-06 20:59:28 - roleName: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-06 20:59:28 - levelName: Administrador
+DEBUG 2021-08-06 20:59:28 - claimRole: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-06 20:59:28 - claims: System.Collections.Generic.List`1[System.Security.Claims.Claim]
+DEBUG 2021-08-06 20:59:28 - HttpContext.SignInAsync CookieAuthenticationDefaults.AuthenticationScheme: Cookies
+DEBUG 2021-08-06 20:59:28 - HttpContext.SignInAsync userPrincipal: System.Security.Claims.ClaimsPrincipal
+DEBUG 2021-08-06 20:59:28 - HttpContext.SignInAsync authProperties: Microsoft.AspNetCore.Authentication.AuthenticationProperties
+DEBUG 2021-08-06 20:59:28 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-06 20:59:28 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-06 20:59:28 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:28 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-06 20:59:28 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore.Remove (Início / Fim)
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Início)
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore.GetTokenFromApi - Início
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Início)
+DEBUG 2021-08-06 20:59:44 - accessTokenUrl: https://qa-br-api-gateway.bayer.biz/oauth/access-token
+DEBUG 2021-08-06 20:59:44 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-06 20:59:44 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-06 20:59:44 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-06 20:59:45 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - codRetorno: 201
+DEBUG 2021-08-06 20:59:45 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync - token: {"access_token":"1395f566-22f6-32dd-ba9c-cf1ab37ca499","token_type":"access_token","expires_in":3600}
+DEBUG 2021-08-06 20:59:45 - TokenCachingStore.GetTokenFromApi - httpClient.PostAsync (Fim)
+DEBUG 2021-08-06 20:59:45 - TokenCachingStore.GetTokenFromApi - Fim
+DEBUG 2021-08-06 20:59:45 - TokenCachingStore.FetchToken - Chamando a GetTokenFromApi (Fim)
+DEBUG 2021-08-06 20:59:45 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:45 - AuthenticationBO.Login - Início
+DEBUG 2021-08-06 20:59:46 - AuthenticationBO.Login - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-06 20:59:46 - AuthenticationBO.Login - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-06 20:59:46 - AuthenticationBO.Login - Fim
+DEBUG 2021-08-06 20:59:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:47 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:47 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-06 20:59:47 - IV-USER: elwku
+DEBUG 2021-08-06 20:59:47 - PD-UID: 
+DEBUG 2021-08-06 20:59:47 - User.Identity.IsAuthenticated: False
+DEBUG 2021-08-06 20:59:47 - User.Identity.Name: 
+DEBUG 2021-08-06 20:59:47 - !User.Identity.IsAuthenticated || User.Identity.Name != user
+DEBUG 2021-08-06 20:59:47 - user: elwku
+DEBUG 2021-08-06 20:59:47 - model.AppId: caa0f8bb-210e-41ac-b38b-3404cf46f185
+DEBUG 2021-08-06 20:59:47 - model.CultureName: en-us
+DEBUG 2021-08-06 20:59:47 - model.IP: ::1
+DEBUG 2021-08-06 20:59:47 - model.Login: elwku
+DEBUG 2021-08-06 20:59:47 - model: Bayer.Pegasus.Entities.Api.LoginSSOViewModel
+DEBUG 2021-08-06 20:59:47 - accessToken.ClientHash: NzEzZTM0NTAtMTU2My0zYWQzLWJmNzUtNmFkMTU4ZDFhZjBiOjMzMmY2ODVhLTI0OGItMzUxZS05ZDAzLTg5NDlmNDU1NzI3OA==
+DEBUG 2021-08-06 20:59:47 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:47 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:47 - token: 1395f566-22f6-32dd-ba9c-cf1ab37ca499
+DEBUG 2021-08-06 20:59:47 - AuthenticationBO.LoginSSO - Início
+DEBUG 2021-08-06 20:59:47 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Início)
+DEBUG 2021-08-06 20:59:47 - LoginSSOUrl: https://qa-br-api-gateway.bayer.biz/cp/authservices/2.0/loginsso
+DEBUG 2021-08-06 20:59:47 - payload (Headers.ContentType.CharSet): utf-8
+DEBUG 2021-08-06 20:59:47 - payload (Headers.ContentType.MediaType): application/json
+DEBUG 2021-08-06 20:59:47 - AuthenticationBO.LoginSSO - httpClient.PostAsync - tentativa 1
+DEBUG 2021-08-06 20:59:47 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:47 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:47 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:47 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-06 20:59:47 - IV-USER: 
+DEBUG 2021-08-06 20:59:47 - PD-UID: 
+DEBUG 2021-08-06 20:59:47 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-06 20:59:47 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-06 20:59:47 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:47 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-06 20:59:47 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-06 20:59:48 - AuthenticationBO.LoginSSO - httpClient.PostAsync - codRetorno: 200
+DEBUG 2021-08-06 20:59:48 - AuthenticationBO.LoginSSO - httpClient.PostAsync - token: {"result": {"code": 1, "description": "Your login attempt was successful!", "errorResult": ""}, "return": {"nameUser": "José Alves", "email": "jose.alves3.ext@bayer.com", "isInternal": false, "systemName": "Pegasus", "cwid": "ELWKU", "dtLastLogin": null, "roles": [{"name": "QA-CS-Pegasus_Administrador", "description": null, "owners": "BRBGW;EUNON;GICSW", "approveRequired": false, "level": {"name": "Administrador", "restrictionCodes": null}}], "complementaryFields": []}}
+DEBUG 2021-08-06 20:59:48 - AuthenticationBO.LoginSSO - httpClient.PostAsync (Fim)
+DEBUG 2021-08-06 20:59:48 - AuthenticationBO.LoginSSO - Fim
+DEBUG 2021-08-06 20:59:48 - output: {"result":{"code":1,"description":null,"culture":null,"clientid":"713e3450-1563-3ad3-bf75-6ad158d1af0b","accesstoken":"1395f566-22f6-32dd-ba9c-cf1ab37ca499"},"return":{"nameUser":"José Alves","email":"jose.alves3.ext@bayer.com","isInternal":false,"systemName":"Pegasus","cwid":"ELWKU","dtLastLogin":"0001-01-01T00:00:00","roles":[{"name":"QA-CS-Pegasus_Administrador","level":{"name":"Administrador","restrictionCodes":null}}],"complementaryFields":null}}
+DEBUG 2021-08-06 20:59:48 - rolls: [
+  {
+    "name": "QA-CS-Pegasus_Administrador",
+    "level": {
+      "name": "Administrador",
+      "restrictionCodes": null
+    }
+  }
+]
+DEBUG 2021-08-06 20:59:48 - roles: System.Collections.Generic.List`1[Bayer.Pegasus.Entities.Api.RoleModel]
+DEBUG 2021-08-06 20:59:48 - var rl: Bayer.Pegasus.Entities.Api.ReturnModel
+DEBUG 2021-08-06 20:59:48 - AuthService: Role não está NULL
+DEBUG 2021-08-06 20:59:48 - _logger.LogInformation(role.Name): QA-CS-Pegasus_Administrador
+DEBUG 2021-08-06 20:59:49 - roleName: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-06 20:59:49 - levelName: Administrador
+DEBUG 2021-08-06 20:59:49 - claimRole: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: QA-CS-Pegasus_Administrador
+DEBUG 2021-08-06 20:59:49 - claims: System.Collections.Generic.List`1[System.Security.Claims.Claim]
+DEBUG 2021-08-06 20:59:49 - HttpContext.SignInAsync CookieAuthenticationDefaults.AuthenticationScheme: Cookies
+DEBUG 2021-08-06 20:59:49 - HttpContext.SignInAsync userPrincipal: System.Security.Claims.ClaimsPrincipal
+DEBUG 2021-08-06 20:59:49 - HttpContext.SignInAsync authProperties: Microsoft.AspNetCore.Authentication.AuthenticationProperties
+DEBUG 2021-08-06 20:59:49 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-06 20:59:49 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-06 20:59:49 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:49 - LoggedBaseController.GetGenericReportModel (Início)
+DEBUG 2021-08-06 20:59:49 - LoggedBaseController.GetGenericReportModel (Fim)
+DEBUG 2021-08-06 20:59:51 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:51 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:52 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:52 - LoggedBaseController.OnActionExecutionAsync (Início)
+DEBUG 2021-08-06 20:59:52 - IV-USER: 
+DEBUG 2021-08-06 20:59:52 - PD-UID: 
+DEBUG 2021-08-06 20:59:52 - LoggedBaseController.OnActionExecutionAsync (Fim)
+DEBUG 2021-08-06 20:59:52 - next: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+DEBUG 2021-08-06 20:59:52 - ----------------------------------------------------
+DEBUG 2021-08-06 20:59:52 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:52 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:52 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:52 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:52 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:52 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:53 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:53 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - BrandController - Construtor (Início)
+DEBUG 2021-08-06 20:59:54 - BrandController - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:54 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:55 - BrandController - Construtor (Início)
+DEBUG 2021-08-06 20:59:55 - BrandController - Construtor (Fim)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore.FetchToken - Obtendo o Token (Início)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore.FetchToken - Obtendo o Token (Fim)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Fim)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Início)
+DEBUG 2021-08-06 20:59:55 - TokenCachingStore - Construtor (Fim)

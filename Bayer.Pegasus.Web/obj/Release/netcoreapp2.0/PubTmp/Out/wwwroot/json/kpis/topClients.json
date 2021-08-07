@@ -1,0 +1,28 @@
+﻿[
+  {
+    "code": "0001",
+    "description": "Cliente 1",
+    "value": "300.000",
+    "pct": "100%"
+
+  },
+  {
+    "code": "0002",
+    "description": "Cliente 2",
+    "value": "250.000",
+    "pct": "75%"
+  },
+  {
+    "code": "0003",
+    "description": "Cliente 3",
+    "value": "200.000",
+    "pct": "60%"
+  },
+  {
+    "code": "0004",
+    "description": "Cliente 4",
+    "value": "175.000",
+    "pct": "55%"
+  }
+]
+

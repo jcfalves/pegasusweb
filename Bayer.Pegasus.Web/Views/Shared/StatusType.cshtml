@@ -1,0 +1,43 @@
+﻿
+<div class="painelibdp" style="width: 100%; float: left;
+     padding: 1% 1% 1% 1%;background-color:#d9ffd3;">
+    <legend>Status</legend>
+    <div>
+        <input id="r_todos" type="radio" name="filtro" value="todos"
+               onclick="selectStatus(this.value)" />
+        <label class="label-intervalo" for="r_todos"></label>
+        Todos
+    </div>
+    <div>
+        <input id="r_pendentes" type="radio" name="filtro" value="pendentes" checked="checked"
+               onclick="selectStatus(this.value)" />
+        <label class="label-intervalo" for="r_pendentes"></label>
+        Pendentes
+    </div>
+    <div>
+        <input id="r_processados" type="radio" name="filtro" value="processados"
+               onclick="selectStatus(this.value)" />
+        <label class="label-intervalo" for="r_processados"></label>
+        Processados
+    </div>
+    <div>
+        <input id="r_excluidos" type="radio" name="filtro" value="excluidos"
+               onclick="selectStatus(this.value)" />
+        <label class="label-intervalo" for="r_excluidos"></label>
+        Excluídos
+    </div>
+</div>
+<br />
+<input type="hidden" id="statusacao" name="statusacao" value="">
+<br />
+<br />
+
+<button class="button button1"
+        data-bind="click: GetListArquivosRetroativos">
+    Pesquisar
+</button>
+<button class="button button1"
+        data-bind="click: OnGenerateExcel">
+    Exportar Excel
+</button>
+

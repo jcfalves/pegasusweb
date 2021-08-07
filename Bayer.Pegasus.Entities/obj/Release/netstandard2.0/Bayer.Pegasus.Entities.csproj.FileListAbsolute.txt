@@ -1,0 +1,9 @@
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\bin\Release\netstandard2.0\Bayer.Pegasus.Entities.deps.json
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\bin\Release\netstandard2.0\Bayer.Pegasus.Entities.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\bin\Release\netstandard2.0\Bayer.Pegasus.Entities.pdb
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\obj\Release\netstandard2.0\Bayer.Pegasus.Entities.csprojAssemblyReference.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\obj\Release\netstandard2.0\Bayer.Pegasus.Entities.csproj.CoreCompileInputs.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\obj\Release\netstandard2.0\Bayer.Pegasus.Entities.AssemblyInfoInputs.cache
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\obj\Release\netstandard2.0\Bayer.Pegasus.Entities.AssemblyInfo.cs
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\obj\Release\netstandard2.0\Bayer.Pegasus.Entities.dll
+C:\Projetos\CS-PDB-PEGASUS\Aplicação\Bayer.Pegasus.Entities\obj\Release\netstandard2.0\Bayer.Pegasus.Entities.pdb

@@ -1,0 +1,55 @@
+﻿[
+    {
+      "code_city_IBGE": "0001",
+      "title": "Brasilia",
+      "code_city_uf": "SP",
+      "qt_acquired": "2500",
+      "qt_loyal": "3.000",
+      "qt_lost": "1.000",
+      "qt_reacquired": "1500",
+      "qt_retained": "200",
+      "description": "<b>New York</b> is the most populous city in the United States and the center of the New York Metropolitan Area, one of the most populous metropolitan areas in the world.",
+      "latitude": -15.7801,
+      "longitude": -47.9292
+    },
+    {
+      "code_city_IBGE": "0002",
+      "title": "Campinas",
+      "code_city_uf": "SP",
+      "qt_acquired": "2500",
+      "qt_loyal": "3.000",
+      "qt_lost": "1.000",
+      "qt_reacquired": "1500",
+      "qt_retained": "200",
+      "description": "<b>New York</b> is the most populous city in the United States and the center of the New York Metropolitan Area, one of the most populous metropolitan areas in the world.",
+      "latitude": -22.907104,
+      "longitude": -47.063240
+    },
+    {
+      "code_city_IBGE": "0003",
+      "title": "São Paulo",
+      "code_city_uf": "SP",
+      "qt_acquired": "2500",
+      "qt_loyal": "3.000",
+      "qt_lost": "1.000",
+      "qt_reacquired": "1500",
+      "qt_retained": "200",
+      "description": "New York is the most populous city in the United States and the center of the New York Metropolitan Area, one of the most populous metropolitan areas in the world.",
+      "latitude": -23.533773,
+      "longitude": -46.625290
+    },
+    {
+      "code_city_IBGE": "0004",
+      "title": "Belém",
+      "code_city_uf": "SP",
+      "qt_acquired": "2500",
+      "qt_loyal": "3.000",
+      "qt_lost": "1.000",
+      "qt_reacquired": "1500",
+      "qt_retained": "200",
+      "description": "New York is the most populous city in the United States and the center of the New York Metropolitan Area, one of the most populous metropolitan areas in the world.",
+      "latitude": -1.45583,
+      "longitude": -48.50444
+    }
+
+  ]

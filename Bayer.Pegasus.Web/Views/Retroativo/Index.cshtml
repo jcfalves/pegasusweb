@@ -1,0 +1,24 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+@{ Html.RenderPartial("Filter", Model); }
+
+@section scripts {    
+    <style type="text/css">
+        input[type="checkbox"] {
+            display: block !important;
+            min-height: 0px !important;
+            margin-left: 0px !important;
+        }
+    </style>
+    <script src="~/js/ViewModels/RetroativoViewModel.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var viewModel = new RetroativoViewModel();
+            viewModel.GetListArquivosRetroativos();
+            ko.applyBindings(viewModel);
+        });
+
+    </script>
+}

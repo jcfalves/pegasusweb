@@ -1,0 +1,35 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+@{ Html.RenderPartial("../Shared/Header.cshtml", Model); }
+
+@{ Html.RenderPartial("Filter", Model); }
+
+@{ Html.RenderPartial("../Shared/Historic.cshtml"); }
+
+@{ Html.RenderPartial("Map"); }
+
+@section scripts {
+
+
+    <link rel="stylesheet" href="~/js/ammap/ammap.css" type="text/css" />
+    <script src="~/js/ammap/ammap.js" type="text/javascript"></script>
+    <!-- check ammap/maps/js/ folder to see all available countries -->
+    <!-- map file should be included after ammap.js -->
+    <script src="~/js/ammap/maps/js/brazilLow.js" type="text/javascript"></script>
+    <script src="~/js/ammap/themes/pegasus.js"></script>
+
+    <script src="~/js/ViewModels/Shared/CFOPViewModel.js"></script>
+    <script src="~/js/ViewModels/ClientsReportViewModel.js"></script>
+
+    <script>
+
+        var viewModel = new ClientsReportViewModel();
+        $(document).ready(function () {
+
+            ko.applyBindings(viewModel);
+
+            viewModel.HistoryViewModel.LoadData();
+        });
+
+    </script>
+}

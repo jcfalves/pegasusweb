@@ -1,0 +1,466 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+
+@{ Html.RenderPartial("../Shared/Header.cshtml"); }
+
+<div id="filtro-consulta" class="row panel-filtros">
+    <div class="col-lg-12 formContent">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="halfside col-md-12">
+                                <div class="wrap-row">
+                                    <button class="btn btn-cyan" data-bind="click: ShowModal.bind($data, '#ModalFiltroMonitor')">
+                                        Filtro
+                                    </button>
+                                    <button class="btn btn-cyan" data-bind="click: ShowModal.bind($data, '#ModalProcessamento')">
+                                        Processamento Manual
+                                    </button>
+                                    <button class="btn btn-cyan" data-bind="click: viewModel.ChangeUpdateStep">
+                                        Atualizar
+                                    </button>
+                                    <button class="btn btn-cyan" data-bind="click: viewModel.DeleteFilterStep">
+                                        Limpar Filtros
+                                    </button>
+                                    <button class="btn-link btn-cyan" style="float:right;" data-bind="click: ShowModal.bind($data, '#ModalLegenda')">
+                                        Legenda
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form">
+                            <div class="halfside col-md-12">
+                                <div class="wrap-row">
+                                    <div class="container">
+                                        <div class="form-group">
+                                            <div class="loader"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="integracaoMonitoramentoI" hidden="hidden">
+                        <div class="title-tab col-md-12">
+                            <label class="subtitle-tab">Importação:</label>
+                        </div>
+                        <div class="col-lg-2" style="border: 2px solid #dad3d3;">
+                            <span class="monitor-col-name-integracao-title">
+                                Integrações
+                            </span>
+                            <div data-bind="foreach: Integracoes">
+                                <span class="monitor-col-name-integracao" data-bind="text: Name"> </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                Captação
+                            </span>
+                            <div data-bind="foreach: StepCaptacao">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                Pré-Validação
+                            </span>
+                            <div data-bind="foreach: StepValidacao">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 2)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                ODS
+                            </span>
+                            <div data-bind="foreach: StepODS">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 3)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                DW
+                            </span>
+                            <div data-bind="foreach: StepDW">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 4)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                DMI
+                            </span>
+                            <div data-bind="foreach: StepDMI">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 5)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <div class="row">
+                    <div id="integracaoMonitoramentoE" hidden="hidden">
+                        <div class="title-tab col-md-12">
+                            <label class="subtitle-tab">Exportação:</label>
+                        </div>
+                        <div class="col-lg-4" style="border: 2px solid #dad3d3;">
+                            <span class="monitor-col-name-integracao-title">
+                                Integrações
+                            </span>
+                            <div data-bind="foreach: IntegracoesE">
+                                <span class="monitor-col-name-integracao" data-bind="text: Name"> </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                Preparação
+                            </span>
+                            <div data-bind="foreach: StepPreparacao">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 6)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4" style="border: 2px solid #dad3d3;">
+                            <span style="color:#7b7575">
+                                Envio
+                            </span>
+                            <div data-bind="foreach: StepEnvio">
+                                <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 7)">
+                                    <span style="width:100px;" data-bind="css: CSSResult"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!------------------------------------------------------------------------------------------->
+                <div class="row" id="integracaoMonitoramentoI" hidden="hidden">
+                    <div class="col-xs-12">
+                        <div class=" monitor" style="margin-top:15px;">
+                            <div class="row title">
+                                <div class="col-xs-2 subtitle-tab">Integrações </div>
+                                <div class="col-xs-2 subtitle-tab">Captação</div>
+                                <div class="col-xs-2 subtitle-tab">Pré-Validação</div>
+                                <div class="col-xs-2 subtitle-tab">ODS</div>
+                                <div class="col-xs-2 subtitle-tab">DW</div>
+                                <div class="col-xs-2 subtitle-tab">DMI</div>
+                            </div>
+                            <div data-bind="foreach: IntegracoesLogs">
+                                <div class="row itegracao">
+                                    <div class="col-xs-2 item"><span data-bind="text: name"></span></div>
+                                    <div class="col-xs-2">
+                                        <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: cap"></span></a>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: pre"></span></a>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: ODS"></span></a>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: DW"></span></a>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: DMI"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="integracaoMonitoramentoE" hidden="hidden">
+                    <div class=" monitor">
+                        <div class="row itegracao">
+                            <div class="title-tab col-md-12">
+                                <label class="subtitle-tab">Exportação:</label>
+                            </div>
+                        </div>
+                        <div class="row title">
+                            <div class="col-xs-4 subtitle-tab">Integrações </div>
+                            <div class="col-xs-4 subtitle-tab">Preparação</div>
+                            <div class="col-xs-4 subtitle-tab">Envio</div>
+                        </div>
+                        <div data-bind="foreach: IntegracoesLgosE">
+                            <div class="row itegracao">
+                                <div class="col-xs-4 item"><span data-bind="text: name"></span></div>
+                                <div class="col-xs-4">
+                                    <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: preparacao"></span></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#" data-bind="click: viewModel.ShowLogProcessamento.bind($data, IdProc, 1)"><span style="width:100px;" data-bind="css: envio"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------------------------------------------------------------------------------------------------------------------------>
+
+                <!-- /.row (nested) -->
+                <div class="row">
+                    <div class="panel">
+                        <span id="LastProc">
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel">
+                        <span id="FiltroAplicado">
+                        </span>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <!-- /.panel-body -->
+                <!-- /.panel -->
+            </div>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="modal fade" id="ModalFiltroMonitor" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-archive" aria-hidden="true"></span>Filtro - Histórico</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 halfside">
+                    <label>Integração:</label>
+                    <select id="selIntegracaoFiltro" style="width: 35%;" data-bind="options: dropDownListIntegracaoFiltro,
+                                                                  optionsCaption: 'Selecione',
+                                                                  optionsText: 'name',
+                                                                  optionsValue: 'value',
+                                                                  valueAsNumber: level,
+                                                                  event:{ change: permissionChanged }"></select>
+
+
+                    <div class="form-group" aria-hidden="true">
+                        <div class="row-border">
+                            <div class="form-group form-report-date">
+                                <label>Período:</label>
+                                <div>
+                                    <div class="form-group fa fa-calendar" aria-hidden="true">
+                                        <input class="form-control datepicker" placeholder="" id="dateFilterIni" data-bind="value: dateFilterIni,datePicker: dateFilterIni" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-report-date">
+                                <label>Ate:</label>
+                                <div>
+                                    <div class="form-group fa fa-calendar" aria-hidden="true">
+                                        <input class="form-control datepicker" placeholder="" id="dateFilterEnd" data-bind="value: dateFilterEnd,datePicker: dateFilterEnd" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" aria-hidden="true">
+                                <input type="checkbox" class="custom-control-input" name="chkAutomatico" id="chkAutomatico">
+                                <label class="label-intervalo" for="chkAutomatico"></label>
+                                Automático
+                            </div>
+                            <div class="form-group" aria-hidden="true">
+                                <input type="checkbox" class="custom-control-input" name="chkManual" id="chkManual">
+                                <label class="label-intervalo" for="chkManual"></label>
+                                Manual
+                            </div>
+                            <label>Situação Final:</label>
+                            <select id="selSituacao" style="width: 35%;">
+                                <option value="N">Selecione</option>
+                                <option value="S">Finalizado com Sucesso</option>
+                                <option value="A">Finalizado com Alertas</option>
+                                <option value="E">Finalizado com Erros</option>
+                                <option value="I">Em Execução</option>
+                                <option value="T">Todos</option>
+                            </select>
+                        </div>
+                        <div class="form-buttons floatRight" id="buttonExecutar" runat="server" visible="false">
+                            <button type="button" class="btn btn-file" data-bind="click: FilterProcessos"><span>Filtrar</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalProcessamento" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-archive" aria-hidden="true"></span>Processamento Manual</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 halfside">
+                    <label>Integração:</label>
+                    <select id="selIntegracao" data-bind="options: dropDownListIntegracao,
+                                                                optionsCaption: 'Selecione',
+                                                                optionsText: 'name',
+                                                                optionsValue: 'value',
+                                                                valueAsNumber: level,
+                                                                event:{ change: permissionChanged }"></select>
+
+                    <div class="form-group" aria-hidden="true">
+                        <div class="row-border" id="integracaoApi">
+                            <label>Parametros:</label>
+                            <div class="form-group form-report-date">
+                                <label>Período:</label>
+                                <div>
+                                    <div class="form-group fa fa-calendar" aria-hidden="true">
+                                        <input class="form-control datepicker" placeholder="" id="dateMonitorIni" data-bind="value: dateMonitorIni,datePicker: dateMonitorIni" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-report-date">
+                                <label>Ate:</label>
+                                <div>
+                                    <div class="form-group fa fa-calendar" aria-hidden="true">
+                                        <input class="form-control datepicker" placeholder="" id="dateMonitorEnd" data-bind="value: dateMonitorEnd,datePicker: dateMonitorEnd" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" aria-hidden="true">
+                                @*<label>CNPJ do Distribuidor (Matriz/Filial):</label>
+                                <input class="form-control small-padding halfside" placeholder="" id="numCNPJDistr">*@
+                                @*<div class="col-md-6 col-xs-12">*@
+                                    <label>Parceiro</label>
+                                    <div class="form-group fa fa-handshake-o" aria-hidden="true">
+                                        <input class="form-control tokenFieldInput" placeholder="" id="ClientsReport_Partners" data-bind="tokenField: Partners, tokenFieldRemote: '@Bayer.Pegasus.Utils.Configuration.Instance.PegasusAPIPartner'" />
+                                        <span class="infoText">Você pode buscar por nome, CNPJ ou código SAP</span>
+                                    </div>
+                                @*</div>*@
+                            </div>
+
+                            <div class="form-group" aria-hidden="true">
+                                <label>Número da Nota Fiscal:</label>
+                                <input class="form-control small-padding" placeholder="" maxlength="10" id="numNotaFiscal">
+                            </div>
+
+                        </div>
+                        <div class="row-border" id="integracaoFTP" hidden="hidden">
+                            <label>Escolha uma opção abaixo:</label>
+                            <div class="form-group" aria-hidden="true">
+                                <input id="r_local" type="radio" name="tipo-FTP" value="1" />
+                                <label class="label-intervalo" for="r_local"></label>
+                                Remoto
+                            </div>
+                            <div class="form-group" aria-hidden="true">
+                                <input id="r_remoto" type="radio" name="tipo-FTP" value="2" />
+                                <label class="label-intervalo" for="r_remoto"></label>
+                                Local
+                                <form asp-controller="Monitor" enctype="multipart/form-data" id="BlobUploadFormProcess" method="post" role="form">
+                                    <div class="form-group" hidden="hidden" id="integracaoUpload">
+
+                                        <label>Selecione um arquivo</label>
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Selecione… <input type="file" style="display: none;" name="file" id="FileInputModal">
+                                            </span>
+                                            <input type="text" style="width:50%;" readonly="" id="BrowseInputModal">
+                                        </label>
+
+                                        <button type="submit" value="Upload Arquivo" class="btn btn-default" data-bind="click: viewModel.UploadFile">Carregar</button>
+                                        <div class="status-excel-alt" id="LoadingFile" hidden="hidden">
+                                            <img src="~/images/loading-excel.gif" />
+                                            <span>Carregando Arquivo...</span>
+                                        </div>
+                                        <div class="status-excel-alt" id="LoadedFile" hidden="hidden">
+                                            <img src="~/images/checked.png" />
+                                            <span>Arquivo carregado com sucesso!</span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-buttons floatRight" id="buttonExecutar" runat="server" visible="false">
+                            <button type="button" class="btn btn-pink" data-bind="click: viewModel.SaveProcessos"><i class="fa fa-check-square" aria-hidden="true"></i><span>Executar</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalLegenda" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab"><span class="fa fa-search" aria-hidden="true"></span>Legenda</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12 halfside">
+                    <span class="col-xs-12 glyphicon-dot-none">
+                        Sem Processamento
+                    </span>
+                    <span class="col-xs-12 glyphicon-dot-in-process">
+                        Em Processamento
+                    </span>
+                    <span class="col-xs-12 glyphicon-dot-sucess">
+                        Sucesso
+                    </span>
+                    <span class="col-xs-12 glyphicon-dot-alert">
+                        Alerta
+                    </span>
+                    <span class="col-xs-12 glyphicon-dot-error">
+                        Erro de Processamento
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+
+    <script src="~/js/ViewModels/MonitorViewModel.js"></script>
+
+    <script>
+        var viewModel = new MonitorViewModel();
+
+        $(document).on('change', ':file', function () {
+            var input = $(this)
+            var label = $('#BrowseInputModal').val(input.val().replace(/\\/g, '/').replace(/.*\//, ''));
+        });
+
+
+        $(document).ready(function () {
+
+            globalparams = {}; 
+
+            viewModel.UpdateStep();
+            viewModel.GetListIntegracao();
+            viewModel.GetListIntegracaoFiltro();
+            ko.applyBindings(viewModel);
+        });
+
+    </script>
+}

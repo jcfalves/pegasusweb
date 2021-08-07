@@ -1,0 +1,126 @@
+﻿@model List<Bayer.Pegasus.Entities.AcceraReportItem>
+@using System.Globalization
+
+<div class="col-lg-12 title-row">
+    <h2 id="titleFiltro" runat="server" class="title-tab col-md-6 fa fa-angle-left" visible="false" data-open="filtro-consulta">Resultados</h2>
+    <button class="btn btnSecundario print-tab" aria-hidden="true"><i class="fa fa-print" aria-hidden="true"></i>Imprimir</button>
+</div>
+<div class="col-lg-12 formContent">
+    <form role="form">
+        <div class="col-md-12">
+            <div id="legenda-accera">
+                <div class="sem-envio">
+                    <span>F</span>
+                    Dias Sem Envios
+                </div>
+                <div class="sem-venda">
+                    <span>SV</span>
+                    Dias Sem Vendas
+                </div>
+                <div class="feriado">
+                    <span>FD</span>
+                    Feriados
+                </div>
+                <div class="final-semana">
+                    <span>FS</span>
+                    Finais de Semana
+                </div>
+            </div>
+        </div>
+        <div class="halfside col-md-12 table-wrapper">
+            <div id="AcceraHeader">
+                <table class="ReportAccera table-fixed">
+                    <tbody>
+                        <tr>
+                            <th rowspan="2">Parceiros</th>
+                            <th rowspan="2">Criticidade</th>
+                            <th rowspan="2">Ação</th>
+                            <th rowspan="2">Responsável</th>
+                            <th rowspan="2">Data Última Interação</th>
+                            <th rowspan="2">Última Posição Estoque</th>
+                            @{
+                                Dictionary<int, int> months = Bayer.Pegasus.Utils.DateUtils.GetMonthsAccera();
+
+                                foreach (KeyValuePair<int, int> month in months)
+                                {
+                                    <th colspan="@month.Key">@CultureInfo.CreateSpecificCulture("pt").DateTimeFormat.GetMonthName(month.Value)</th>
+                                }
+                            }
+                        </tr>
+                        <tr>
+                            @{
+                                foreach (KeyValuePair<int, int> month in months)
+                                {
+                                    for (int i = 0; i < month.Key; i++)
+                                    {
+                                        int dia = (month.Value == DateTime.Now.Month) ? DateTime.Now.Day - 1 - i : DateTime.DaysInMonth(DateTime.Now.Year, month.Value) - i;
+                                        <th class="status-dia-label">@dia</th>
+                                    }
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+            <div id="AcceraBody">
+                <table class="ReportAccera">
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            string criticalityLabel = "";
+                            <tr>
+
+
+                                <td>@item.PartnerName</td>
+                                @switch (item.Criticality)
+                                {
+                                    case "Desatualizado":
+                                        criticalityLabel = "outdated";
+                                        break;
+                                    case "Atualizado":
+                                        criticalityLabel = "updated";
+                                        break;
+                                    case "Em atenção":
+                                        criticalityLabel = "attention";
+                                        break;
+                                }
+                                <td class="labelCriticality @criticalityLabel"><span>@item.Criticality</span></td>
+                                <td class="acao"><span class="fa fa-user-circle" aria-hidden="true"></span><span>@item.Action</span></td>
+                                <td class="responsavel">@item.Responsible</td>
+                                <td>@item.LastInteraction.ToShortDateString()</td>
+                                <td>@item.LastStockPosition.ToShortDateString()</td>
+                                @foreach (var dia in item.DaysPosition)
+                                {
+                                    String classStatus = "";
+                                    switch (dia.Value)
+                                    {
+                                        case "F":
+                                            classStatus = "sem-envio";
+                                            break;
+                                        case "FD":
+                                            classStatus = "feriado";
+                                            break;
+                                        case "SV":
+                                            classStatus = "sem-venda";
+                                            break;
+                                        case "FS":
+                                            classStatus = "final-semana";
+                                            break;
+                                        default:
+                                            classStatus = "dia-ok";
+                                            break;
+
+                                    }
+                                    <td class="status-dia @classStatus">@dia.Value</td>
+                                }
+                            </tr>
+
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- /.col-lg-12 -->

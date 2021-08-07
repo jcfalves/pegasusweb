@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+    <title>Relatório do Fechamento de Estoque</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style type="text/css">
+        /** RESET STYLES **/
+        p {
+            margin: 1em 0;
+        }
+        /*Yahoo paragraph fix*/
+        table td {
+            border-collapse: collapse;
+        }
+        /*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+        img, a img {
+            border: 0;
+            height: auto;
+            outline: none;
+            text-decoration: none;
+        }
+        /* Remove the borders that appear when linking images with "border:none" and "outline:none" */
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            color: #018EC6;
+        }
+
+        a, a:visited, a:hover {
+            color: #008FCB;
+        }
+
+        body {
+            height: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100% margin:0;
+            padding: 0;
+            width: 100% !important;
+        }
+        /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+        /*linkfix a {color: #ffffff !important; text-decoration: none;}*/
+
+        /** CLIENT-SPECIFIC STYLE **/
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        /* Force IE to smoothly render resized images. */
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        /* Remove spacing between tables in Outlook 2007 and up. */
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+        /* Force Outlook.com to display emails at full width. */
+        p, a, li, td, blockquote {
+            mso-line-height-rule: exactly;
+        }
+            /* Force Outlook to render line heights as they're originally set. */
+            a[href^="tel"], a[href^="sms"] {
+                color: inherit;
+                cursor: default;
+                text-decoration: none;
+            }
+        /* Force mobile devices to inherit declared link styles. */
+        p, a, li, td, body, table, blockquote {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+        .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font {
+            line-height: 100%;
+        }
+        /* Force Outlook.com to display line heights normally. */
+
+        /** STRUCTURAL STYLES **/
+
+        /** CONTENT STYLES **/
+        body {
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0 auto;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            color: #505050;
+            font-family: "Arial", sans-serif !important;
+        }
+
+        /* Meu c�digo */
+        @media only screen and (max-device-width: 640px), screen and (max-width: 640px) {
+            body[yahoo] .container {
+                max-width: 640px;
+                width: 100% !important;
+            }
+
+            body[yahoo] .imagem {
+                width: 100%;
+                height: auto;
+                min-height: 0 !important;
+                min-width: 0 !important;
+            }
+
+            body[yahoo] .imagemBotao {
+                width: 100%;
+                min-width: 0 !important;
+            }
+
+            body[yahoo] .clear {
+                display: none;
+            }
+
+            body[yahoo] .center {
+                text-align: center !important;
+            }
+
+            body[yahoo] .tableFull {
+                padding: 0 15px;
+            }
+
+            body[yahoo] .tableContainer {
+                width: 100%;
+            }
+
+            body[yahoo] .column {
+                width: auto;
+            }
+
+            body[yahoo] .espacoInferior {
+                margin-bottom: 20px;
+            }
+
+            body[yahoo] .espacoSecao {
+                height: 20px;
+            }
+        }
+
+        /** MOBILE STYLES **/
+        @media only screen and (max-device-width: 480px), screen and (max-width: 480px) {
+            /* CLIENT-SPECIFIC STYLES */
+            /* Template Shell */
+            body[yahoo] {
+                width: 100% !important;
+                min-width: 100% !important;
+                margin: 0 auto !important;
+            }
+                /* Force iOS Mail to render the email at full width & removes margins. */
+
+
+                /*** STRUCTURAL ***/
+                body[yahoo] table .container {
+                    width: 100% !important;
+                    max-width: 480px !important;
+                }
+
+                body[yahoo] .mobileShow {
+                    display: block !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    overflow: visible !important;
+                    width: auto !important;
+                    max-height: inherit !important;
+                }
+
+                body[yahoo] .mobileHide {
+                    display: none !important;
+                }
+
+                body[yahoo] .photo img {
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    height: auto !important;
+                }
+
+                body[yahoo] td .columnStack {
+                    width: 100% !important;
+                    display: block !important;
+                }
+
+                body[yahoo] .contentCenter, body[yahoo] .contentCenter img, body[yahoo] .contentCenter table {
+                    margin: 0 auto !important;
+                }
+
+                body[yahoo] .slotCenter img {
+                    margin: 0 auto !important;
+                }
+
+                body[yahoo] .textCenter {
+                    text-align: center !important;
+                }
+
+                body[yahoo] .nullBorder {
+                    border: none !important;
+                }
+
+                body[yahoo] .resetHeight {
+                    height: auto !important;
+                }
+
+            /* CLIENT-SPECIFIC STYLES */
+            /* Template Shell */
+            body[yahoo] {
+                width: 100% !important;
+                min-width: 100% !important;
+                margin: 0 auto !important;
+            }
+                /* Force iOS Mail to render the email at full width & removes margins. */
+
+                body[yahoo] .fonte12px {
+                    font-size: 12px !important;
+                    line-height: 18px !important;
+                }
+
+                body[yahoo] .fonte14px {
+                    font-size: 14px !important;
+                    line-height: 18px !important;
+                }
+
+                body[yahoo] .fonte16px {
+                    font-size: 16px !important;
+                    line-height: 20px !important;
+                }
+
+                body[yahoo] .fonte18px {
+                    font-size: 18px !important;
+                    line-height: 22px !important;
+                }
+
+                body[yahoo] .fonte20px {
+                    font-size: 20px !important;
+                    line-height: 24px !important;
+                }
+
+                body[yahoo] .heightAuto {
+                    height: auto;
+                }
+
+                body[yahoo] .heightMobile {
+                    height: 100px;
+                }
+
+                body[yahoo] .heightMobileSpace {
+                    height: 20px;
+                }
+        }
+    </style>
+</head>
+<body style="margin: 0px; -webkit-text-size-adjust:none;" yahoo="fix">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <table width="680" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="text-align: center; padding: 15px;" bgcolor="#64ba4b">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right; padding: 15px;">
+                            <img src="https://shared.bayer.com/img/bayer-logo.png" width="80" height="80"></img>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="text" style="text-align: center; padding: 30px; padding-top: 0; font-weight: bold; font-size: 30px; color: #0393cf;">
+                            Pegasus
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="text" style="text-align: center; padding: 15px; font-size: 18px;">
+                            O Relatório do Fechamento de Estoque está disponível para download.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; padding-bottom: 45px;">
+                            <table align="center" width="320" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <!--[if mso]>
+                                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#LINK#?Identifier=#IDENTIFIER#" style="height:60px;v-text-anchor:middle;width:320px;" arcsize="5%" strokecolor="#6dc156" fillcolor="#6dc156">
+                                                    <w:anchorlock/>
+                                                    <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:20px;">Clique aqui para acessá-lo</center>
+                                                  </v:roundrect>
+                                            <![endif]-->
+                                            <a href="#LINK#?Identifier=#IDENTIFIER#"><span style="background-color:#6dc156;border:1px solid #6dc156;border-radius:3px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:20px;line-height:60px;text-align:center;text-decoration:none;width:320px;-webkit-text-size-adjust:none;mso-hide:all;">Clique aqui para acessá-lo</span></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; padding: 40px;" bgcolor="#24578a"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

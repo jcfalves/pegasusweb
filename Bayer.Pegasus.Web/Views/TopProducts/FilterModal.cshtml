@@ -1,0 +1,27 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+<!-- Modal -->
+<div class="modal fade" id="modalTopProducts" role="dialog">
+    <div class="modal-dialog modal-xl">
+
+        <!-- Modal content-->
+        <div class="modal-content" data-bind="with:TopProductsViewModel">
+            <div class="modal-header">
+                <div class="row titleModal" id="titleModal" runat="server" visible="true">
+                    <h2 class="title-tab">Top Produtos em Sell Out</h2>
+                    <span class="fechar-modal" data-dismiss="modal">x</span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+
+                <form role="form">
+                    <div class="row">
+                        <div class="halfside col-md-12">
+                            @{ Html.RenderPartial("FilterContent.cshtml"); }
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

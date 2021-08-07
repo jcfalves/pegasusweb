@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bayer.Pegasus.ApiClient\Bayer.Pegasus.ApiClient.csproj" />
+    <ProjectReference Include="..\Bayer.Pegasus.Data\Bayer.Pegasus.Data.csproj" />
+    <ProjectReference Include="..\Bayer.Pegasus.Entities\Bayer.Pegasus.Entities.csproj" />
+    <ProjectReference Include="..\Bayer.Pegasus.Utils\Bayer.Pegasus.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

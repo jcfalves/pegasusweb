@@ -1,0 +1,83 @@
+﻿@model Bayer.Pegasus.Web.Models.GenericReportModel
+<div class="wrap-row">
+    <div class="col-md-12">
+        <table id="DatatableCFOPRegistration" class="table table-striped table-bordered dt-responsive cell-border row-border" style="width:100%">
+            <thead>
+                <tr>
+                    <th>CFOP</th>
+                    <th>Descrição</th>
+                    <th>Operação</th>
+                    <th>Escopo Pegasus</th>
+                    <th>Situação</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCFOP" role="document">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="padding-left: 20px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width:5%;">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" style="width:90%;"><span class="fa fa-edit" aria-hidden="true"></span> <span data-bind="text: TitleModal"></span></h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group" aria-hidden="true">
+                        <label style="width:90%;">Código Cfop:</label>
+                        <input type="text" class="form-control small-padding" id="IdCodigoCfop" placeholder="" style="width:15%;" maxlength="4" data-bind="value: Cd_Cfop, attr : {'disabled' : isDisabled}">                        
+                        <input type="hidden" id="codcfophidden" name="acao" value="" data-bind="value: Cd_CfopHidden">
+                        <input type="hidden" id="acao" name="acao" value="" data-bind="value: Acao">
+
+                    </div>
+                    <div class="form-group" aria-hidden="true">
+                        <label style="width: 90%;">Descrição:</label>
+                        <input type="text" class="form-control small-padding" id="DescricaoCfop" placeholder="" style="width: 90%;" data-bind="value: Ds_Cfop">
+                    </div>
+                    <div class="form-group" aria-hidden="true">
+                        <label style="width: 90%;">Tipo de Operação:</label>                        
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <input id="rOperationType1" name="rOperationType" type="radio" value="DÉBITO" data-bind="checked: OperationType" />
+                                <label for="rOperationType1"></label>
+                                Débito
+                            </div>
+                            <div class="col-md-2">
+                                <input id="rOperationType3" name="rOperationType" type="radio" value="CRÉDITO" data-bind="checked: OperationType" />
+                                <label for="rOperationType3"></label>
+                                Crédito
+                            </div>
+                            <div class="col-md-2">
+                                <input id="rOperationType2" name="rOperationType" type="radio" value="NÃO DEFINIDO"  data-bind="checked: OperationType" />
+                                <label for="rOperationType2"></label>
+                                Não Definido
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="form-group" aria-hidden="true">
+                        <label style="width: 98%;">Espoco Pegasus:</label>
+                        <div class="form-group">
+                            <input id="CheckEscopo" type="checkbox" data-bind="checked: Fl_Pegasus" />
+                            <label for="CheckEscopo"></label>
+                        </div>
+                    </div>
+                    <div class="form-group" aria-hidden="true">
+                        <label style="width: 99%;">Ativo:</label>
+                        <input id="FlagEnable" type="checkbox" data-bind="checked: Fl_Ativo" />
+                        <label for="FlagEnable"></label>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-cyan" data-bind="click: $root.CreateOrUpdateCFOP"><i class="fa fa-angle-double-right" aria-hidden="true"></i><span>Gravar</span></button>                
+            </div>
+
+        </div>
+    </div>
+</div>

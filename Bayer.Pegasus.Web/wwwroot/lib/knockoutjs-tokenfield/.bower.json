@@ -1,0 +1,44 @@
+{
+  "name": "knockoutjs-tokenfield",
+  "homepage": "https://github.com/mryellow/knockoutjs-tokenfield",
+  "authors": [
+    "Mr-Yellow <mr-yellow@mr-yellow.com>"
+  ],
+  "description": "KnockoutJS Bootstrap-tokenfield binder",
+  "main": [
+    "dist/knockoutjs-tokenfield.css",
+    "dist/knockoutjs-tokenfield.min.js"
+  ],
+  "keywords": [
+    "knockoutjs",
+    "tokenfield",
+    "bootstrap",
+    "typeahead"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-tokenfield": "~0.12.0",
+    "typeahead.js": "~0.10.4",
+    "knockout": "~3.1.0"
+  },
+  "resolutions": {
+    "jquery": ">= 1.9.0"
+  },
+  "_release": "8e9a59ed59",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8e9a59ed593b232d6a81b28edcc367a7cfc27f58"
+  },
+  "_source": "https://github.com/mryellow/knockoutjs-tokenfield.git",
+  "_target": "*",
+  "_originalSource": "knockoutjs-tokenfield",
+  "_direct": true
+}
